@@ -2,8 +2,8 @@
 !*/
 
 !.gitignore
-!./series_data.csv
-!./series_data.json
-!./to_json.py
+!series_data.csv
+!series_data.json
+!to_json.py
 
 !server/solr/imdb_series
