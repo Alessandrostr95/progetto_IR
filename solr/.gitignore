@@ -6,4 +6,6 @@
 !series_data.json
 !to_json.py
 
-!server/solr/imdb_series/
+!server/solr/imdb_series/**
+
+*.DS_Store
