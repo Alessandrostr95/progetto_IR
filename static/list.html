@@ -34,6 +34,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //font-awesome icons -->
 	<!-- js -->
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- mio js -->
+	<script type="text/javascript" src="js/main.js"></script>
 	<!-- //js -->
 	<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300'
 		rel='stylesheet' type='text/css'>
@@ -323,16 +325,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="faq">
 		<div class="container" style="display: flex;">
 			<div class="w3_search" style="margin: 0 !important; flex:content;">
-				<form action="#" method="post" style="margin: 0 20%">
-					<input type="text" name="Search" id="overview" placeholder="Search" required="">
-					<input type="submit" value="Go">
+				<form id="search_form" action="#" method="post" style="margin: 0 20%">
+					<input type="text" name="Overview" id="overview" placeholder="Type overview keywords" class="read-value">
+					<input type="submit" name="go" value="Go">
 					<div class="form-group">
 						<label for="title">Title</label>
-						<input type="text" class="form-control" id="title" placeholder="Enter title">
+						<input type="text" class="form-control read-value" name="Title" placeholder="Enter title">
 					</div>
 					<div class="form-group">
 						<label for="genre">Select genres</label>
-						<select multiple class="form-control" id="exampleFormControlSelect2">
+						<select multiple class="form-control read-value" name="Genres">
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -342,18 +344,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<label for="genre">Boost for</label>
 					<div class="row" style="margin:0">
-						<div class="col-lg-6 in-gp-tl">
+						<div class="col-sm-6 in-gp-tl">
 							<div class="input-group">
 								<span class="input-group-addon">
-									<input type="checkbox" aria-label="...">
+									<input type="checkbox" class="read-value" name="IMDB_Rating" aria-label="...">
 								</span>
 								<input type="text" class="form-control" aria-label="..." value="IMDB_Rating" disabled>
 							</div><!-- /input-group -->
 						</div><!-- /.col-lg-6 -->
-						<div class="col-lg-6 in-gp-tb">
+						<div class="col-sm-6 in-gp-tb">
 							<div class="input-group">
 								<span class="input-group-addon">
-									<input type="checkbox" aria-label="...">
+									<input type="checkbox" class="read-value" aria-label="..." name="N_of_Votes">
 								</span>
 								<input type="text" class="form-control" aria-label="..." value="N of Votes" disabled>
 							</div><!-- /input-group -->
