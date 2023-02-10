@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="shadow-lg p-3 m-5 bg-body rounded">
+      <h3 class="text-center mb-4">Query Panel</h3>
+      <form>
+        <!-- TITOLO -->
+        <div class="row mb-3">
+          <label for="inputTitle" class="col-sm-2 col-form-label">Title</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputTitle" />
+          </div>
+        </div>
+
+        <!-- DESCRIZIONE -->
+        <div class="row mb-3">
+          <label for="inputOverview" class="col-sm-2 col-form-label">
+            Description
+          </label>
+          <div class="col-sm-10">
+            <textarea
+              type="password"
+              class="form-control"
+              id="inputOverview"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- GENERI -->
+        <div class="row mb-3">
+          <div class="col-sm-10 input-group">
+            <span class="input-group-text">Genres</span>
+            <input
+              class="form-control"
+              list="genreList"
+              id="inputGenreList1"
+              placeholder="Select genre..."
+            />
+
+            <input
+              class="form-control"
+              list="genreList"
+              id="inputGenreList2"
+              placeholder="Select genre..."
+            />
+
+            <input
+              class="form-control"
+              list="genreList"
+              id="inputGenreList3"
+              placeholder="Select genre..."
+            />
+
+            <input
+              class="form-control"
+              list="genreList"
+              id="inputGenreList4"
+              placeholder="Select genre..."
+            />
+          </div>
+          <datalist id="genreList">
+            <option value="Fantasy"></option>
+            <option value="Action"></option>
+            <option value="Adventure"></option>
+            <option value="Drama"></option>
+          </datalist>
+        </div>
+
+        <!-- ATTORI -->
+        <div class="row mb-3">
+          <div class="col-sm-10 input-group">
+            <span class="input-group-text">Actors</span>
+            <input
+              class="form-control"
+              list="actorList"
+              id="inputActorList1"
+              placeholder="Select actor..."
+            />
+
+            <input
+              class="form-control"
+              list="actorList"
+              id="inputActorList2"
+              placeholder="Select actor..."
+            />
+
+            <input
+              class="form-control"
+              list="actorList"
+              id="inputActorList3"
+              placeholder="Select actor..."
+            />
+
+            <input
+              class="form-control"
+              list="actorList"
+              id="inputActorList4"
+              placeholder="Select actor..."
+            />
+          </div>
+          <datalist id="actorList">
+            <option value="Emilia Clarke"></option>
+            <option value="Peter Dinklage"></option>
+            <option value="Kit Harington"></option>
+            <option value="Lena Headey"></option>
+          </datalist>
+        </div>
+
+        <!-- OPERATORI: generi -->
+        <div class="row mb-3">
+          <div class="col-sm-6">
+            <label class="col-form-label m-2">Ganer Operator</label>
+            <div class="btn-group col-sm-6" role="group">
+              <input
+                type="radio"
+                class="btn-check"
+                name="op_genre"
+                id="and_genre"
+                autocomplete="off"
+                checked
+              />
+              <label class="btn btn-outline-primary" for="and_genre">AND</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="op_genre"
+                id="or_genre"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-primary" for="or_genre">OR</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- OPERATORI: Attori -->
+        <div class="row mb-3">
+          <div class="col-sm-6">
+            <label class="col-form-label m-2">Actor Operator</label>
+            <div class="btn-group col-sm-6" role="group">
+              <input
+                type="radio"
+                class="btn-check"
+                name="op_actor"
+                id="and_actor"
+                autocomplete="off"
+                checked
+              />
+              <label class="btn btn-outline-primary" for="and_actor">AND</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="op_actor"
+                id="or_actor"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-primary" for="or_actor">OR</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row m-2">
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="flexSwitchCheckDefault"
+            />
+            <label class="form-check-label" for="flexSwitchCheckDefault">
+              Boost by IMDB rate
+            </label>
+          </div>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="flexSwitchCheckChecked"
+              checked
+            />
+            <label class="form-check-label" for="flexSwitchCheckChecked">
+              Boost by users' vote
+            </label>
+          </div>
+        </div>
+
+        <div class="d-md-flex justify-content-md-end">
+          <button type="submit" class="btn btn-primary">GO</button>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
