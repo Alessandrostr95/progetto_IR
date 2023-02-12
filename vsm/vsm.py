@@ -21,12 +21,19 @@ END='\033[0m'
 # PROCESS DATA
 def load_data() -> list[dict]:
     """
-        Load the dataset as a list of dictionaries.
+        Loads the dataset as a list of dictionaries.
     """
     with open(JSON_FILE, 'r', encoding='utf8') as f:
         return json.load(f)
 
 def load_processed_data(log=False) -> list[dict]:
+    """
+        Loads & Process the dataset as a list of dictionaries.
+        It adds this extra field in datas:
+            - `id`: an unique integer identifier.
+            - `title_tokens`: a list of title's **processed** tokens.
+            - `overview_tokens`: a list of overview's **processed** tokens.
+    """
     data = load_data()
 
     N = len(data)
@@ -50,6 +57,10 @@ def load_processed_data(log=False) -> list[dict]:
 
 
 def compute_df(data : list[dict]) -> dict:
+    """
+        Computes the **document frequency** of each term of our collection `data`.
+        The structure of the map is {`term`->`df`}.
+    """
     DF = {}
     N = len(data)
     for i in range(N):
@@ -65,6 +76,11 @@ def compute_df(data : list[dict]) -> dict:
     return DF
 
 def compute_tfidf(data : list[dict], DF : dict | None = None) -> dict:
+    """
+        Computes the **tf-idf** representation of each document in our collection `data`.
+        The structure of the map is {`doc_id`->{`term`->`tf-idf`}}.
+        It is a **sparse representation** of our space vector model.
+    """
     if DF == None:
         DF = compute_df(data)
 
@@ -72,32 +88,97 @@ def compute_tfidf(data : list[dict], DF : dict | None = None) -> dict:
     TF_IDF = {}
 
     for i in range(N):
+        vec = TF_IDF.setdefault(data[i]['id'], dict())
         tokens = data[i]['title_tokens'] + data[i]['overview_tokens']
         counter = Counter(tokens)
-        for t in np.unique(tokens):     # rappresentazione densa
+        for t in np.unique(tokens):     # rappresentazione sparsa
             tf = counter[t] / len(counter)
             df = DF.get(t, 0)   # e' sempre > 0, pero' non si sa mai ...
             idf = np.log((N+1)/(df+1))
-            TF_IDF[data[i]['id'], t] = tf * idf
+            vec[t] = tf * idf
     return TF_IDF
 
 # VECTOR SPACE MODEL
-def vector_space(data : list[dict]):
+def vector_space(data : list[dict]) -> np.ndarray:
+    """
+        Returns a **dense** matrix with all TF_IDF vector.
+    """
     DF = compute_df(data)
     VOCABULARY = list(DF.keys())
     TF_IDF = compute_tfidf(data, DF)
 
     N = len(data)
-    D = np.zeros((N, len(VOCABULARY)))
+    M = np.zeros((N, len(VOCABULARY)))
     
-    for doc, term in TF_IDF:
-        ind = VOCABULARY.index(term)
-        D[doc][ind] = TF_IDF[(doc, term)]
+    for doc_id in TF_IDF:
+        for term in TF_IDF[doc_id]:
+            ind = VOCABULARY.index(term)
+            M[doc_id][ind] = TF_IDF[doc_id][term]
     
-    return D
+    return M
 
-def cosine_similarity(a,b):
-    return np.dot(a, b) / (np.linalg.norm(a)*np.linalg.norm(b))
+def query2vec(query : str | np.ndarray, DF : dict | None = None, collection_size : int | float = 2000) -> dict:
+    """
+        Returns a **sparse** tf-idf vecotr of the string `query`.
+    """
+    
+    # Load DF if missing
+    if DF == None:
+        print(f"{PURPLE}[WARNING]{END}\tMissing document frequency.")
+        data = load_processed_data(log=True)
+        DF = compute_df(data)
+        print(f"{GREEN}[DONE]{END}\tDocs frequency computed.")
+        collection_size = len(data)
+
+    tokens = word_tokenize(str(preprocess(query)))
+    VEC = {}
+    counter = Counter(tokens)
+    for t in np.unique(tokens):     # rappresentazione sparsa
+        tf = counter[t] / len(counter)
+        df = DF.get(t, 0)   # potrebbe essere pari a 0 se nella query ci sono termini non presenti nel mio vocabolario
+        idf = np.log((collection_size+1)/(df+1))
+        VEC[t] = tf * idf
+
+    return VEC
+
+def cosine_similarity(a, b) -> float:
+    """
+        Dense & Sparse implementation of cosine similarity.
+    """
+    if type(a) == type(b) == np.ndarray:
+        return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
+    elif type(a) == type(b) == dict:
+        norm_a = np.linalg.norm(list(a.values()))
+        norm_b = np.linalg.norm(list(b.values()))
+
+        terms = list(set(a.keys()) & set(b.keys()))
+        s = 0
+        for t in terms:
+            s += a[t] * b[t]
+        
+        return s / (float(norm_a) * float(norm_b))
+    else:
+        return 0
+
+def add(x : dict, y : dict) -> dict:
+    """
+        **Sparse** implementation of add operator.
+    """
+    terms = list(set(x.keys()) | set(y.keys()))
+    return {t : x.get(t, 0) + y.get(t, 0) for t in terms}
+
+def mult(x : dict, t : int | float) -> dict:
+    """
+        **Sparse** implementation of scalar multiplication operator.
+    """
+    return {k: v*t for k, v in x.items()}
+
+def sub(x : dict, y : dict) -> dict:
+    """
+        **Sparse** implementation of subtract operator.
+    """
+    return add(x, mult(y, -1))
+    
 
 ## STRING PROCESSING
 def lower_case(text: str | np.ndarray) -> np.ndarray:
@@ -132,9 +213,3 @@ def preprocess(text: str | np.ndarray) -> np.ndarray:
     text = remove_punctuation(text)
     text = remove_apostrophe(text)
     return text
-
-# MAIN
-if __name__ == "__main__":
-    data = load_processed_data(log=True)
-    D = vector_space(data)
-    print(D)
