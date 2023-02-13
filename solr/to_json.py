@@ -7,6 +7,7 @@ if __name__ == "__main__":
     data = pd.read_csv(CSV_PATH)
     
     data["Genre"] = data["Genre"].apply(lambda x: x.split(", "))
+    data['id'] = range(len(data))   # ADD DOC_ID
 
     json_data = data.to_json(orient="records", indent=4)
 
