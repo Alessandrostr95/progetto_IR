@@ -38,9 +38,7 @@ def load_processed_data(log=False) -> list[dict]:
 
     N = len(data)
     c = 0
-    for i in range(N):
-        d = data[i]
-        d['id'] = i
+    for d in data:
         title_tokens = word_tokenize(str(preprocess(d[TITLE])))
         overview_tokens = word_tokenize(str(preprocess(d[OVERVIEW])))
         d['title_tokens'] = title_tokens 
@@ -78,7 +76,7 @@ def compute_df(data : list[dict]) -> dict:
 def compute_tfidf(data : list[dict], DF : dict | None = None) -> dict:
     """
         Computes the **tf-idf** representation of each document in our collection `data`.
-        The structure of the map is {`doc_id`->{`term`->`tf-idf`}}.
+        The structure of the map is {`docID`->{`term`->`tf-idf`}}.
         It is a **sparse representation** of our space vector model.
     """
     if DF == None:
@@ -88,7 +86,7 @@ def compute_tfidf(data : list[dict], DF : dict | None = None) -> dict:
     TF_IDF = {}
 
     for i in range(N):
-        vec = TF_IDF.setdefault(data[i]['id'], dict())
+        vec = TF_IDF.setdefault(data[i]['docID'], dict())
         tokens = data[i]['title_tokens'] + data[i]['overview_tokens']
         counter = Counter(tokens)
         for t in np.unique(tokens):     # rappresentazione sparsa
