@@ -142,6 +142,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 		});
 	</script>
+	<style>
+		#advanced_params:hover {
+			color: #FF8D1B;
+			transition: .5s ease-in-out;
+			cursor: pointer;
+		}
+
+		#advanced_params label {
+			cursor: pointer;
+		}
+
+		.hide {
+			display: hide;
+		}
+	</style>
 	<!-- //tables -->
 </head>
 
@@ -326,41 +341,79 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container" style="display: flex;">
 			<div class="w3_search" style="margin: 0 !important; flex:content;">
 				<form id="search_form" action="#" method="post" style="margin: 0 20%">
-					<input type="text" name="Overview" id="overview" placeholder="Type overview keywords" class="read-value">
+					<input type="text" name="Overview" id="overview" placeholder="Type overview keywords"
+						class="read-value">
 					<input type="submit" name="go" value="Go">
-					<div class="form-group">
-						<label for="title">Title</label>
-						<input type="text" class="form-control read-value" name="Title" placeholder="Enter title">
+					<div class="form-group" id="advanced_params">
+						<i class="fa fa-arrow-up" aria-hidden="true"></i>
+						<label for="advanced">Parametri avanzati</label>
 					</div>
-					<div class="form-group">
-						<label for="genre">Select genres</label>
-						<select multiple class="form-control read-value" name="Genres">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-						</select>
+					<div>
+						<div class="form-group">
+							<label for="title">Title</label>
+							<input type="text" class="form-control read-value" name="Series_Title" placeholder="Enter title">
+						</div>
+						<div class="form-group">
+							<label for="genre">Select genres</label>
+							<select multiple class="form-control Genre" name="values">
+								<option>Action</option>
+								<option>Adventure</option>
+								<option>Biography</option>
+								<option>Crime</option>
+								<option>Drama</option>
+								<option>Fantasy</option>
+								<option>Horror</option>
+								<option>Mystery</option>
+								<option>Romance</option>
+								<option>Sci-Fi</option>
+								<option>Thriller</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="Genres_operator">Genres Operator</label>
+							<label class="btn btn-outline-primary" for="and_genre">AND</label>
+							<input type="radio" name="op" class="Genre" value="AND" checked />
+							<label class="btn btn-outline-primary" for="or_genre">OR</label>
+							<input type="radio" name="op" class="Genre" value="OR"/>
+						</div>
+						<div class="form-group">
+							<label for="genre">Select actors</label>
+							<select multiple class="form-control Actors" name="Actors">
+								<option>Emilia Clarke</option>
+								<option>Kit Harington</option>
+								<option>Lena Headey</option>
+								<option>Peter Dinklage</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="Actors_operator">Actors Operator</label>
+							<label class="btn btn-outline-primary" for="and_actors">AND</label>
+							<input type="radio" name="op_actors" class="Actors" autocomplete="off" checked />
+							<label class="btn btn-outline-primary" for="or_actors">OR</label>
+							<input type="radio" name="op_actors" class="Actors" autocomplete="off" />
+						</div>
+						<label for="genre">Boost for</label>
+						<div class="row" style="margin:0">
+							<div class="col-sm-6 in-gp-tl">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<input type="checkbox" class="boost" name="IMDB_Rating" aria-label="...">
+									</span>
+									<input type="text" class="form-control" aria-label="..." value="IMDB_Rating"
+										disabled>
+								</div><!-- /input-group -->
+							</div><!-- /.col-lg-6 -->
+							<div class="col-sm-6 in-gp-tb">
+								<div class="input-group">
+									<span class="input-group-addon">
+										<input type="checkbox" class="boost" aria-label="..." name="N_of_Votes">
+									</span>
+									<input type="text" class="form-control" aria-label="..." value="N of Votes"
+										disabled>
+								</div><!-- /input-group -->
+							</div><!-- /.col-lg-6 -->
+						</div><!-- /.row -->
 					</div>
-					<label for="genre">Boost for</label>
-					<div class="row" style="margin:0">
-						<div class="col-sm-6 in-gp-tl">
-							<div class="input-group">
-								<span class="input-group-addon">
-									<input type="checkbox" class="read-value" name="IMDB_Rating" aria-label="...">
-								</span>
-								<input type="text" class="form-control" aria-label="..." value="IMDB_Rating" disabled>
-							</div><!-- /input-group -->
-						</div><!-- /.col-lg-6 -->
-						<div class="col-sm-6 in-gp-tb">
-							<div class="input-group">
-								<span class="input-group-addon">
-									<input type="checkbox" class="read-value" aria-label="..." name="N_of_Votes">
-								</span>
-								<input type="text" class="form-control" aria-label="..." value="N of Votes" disabled>
-							</div><!-- /input-group -->
-						</div><!-- /.col-lg-6 -->
-					</div><!-- /.row -->
 				</form>
 			</div>
 		</div>
