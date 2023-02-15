@@ -134,15 +134,15 @@ function buildMoviesList(json) {
         blockStars.classList.add("block-stars");
         let ul = document.createElement("ul");
         ul.classList.add("w3l-ratings");
-        const stars = 4.5; // Qui ci andrà il numero di stelle dal nuovo field
+        const stars = 4.24; // Qui ci andrà il numero di stelle dal nuovo field
         for (let iLi = 0; iLi < 5; iLi++) {
             const li = document.createElement("li");
             const i = document.createElement("i");
             i.classList.add("fa");
             i["aria-hidden"] = "true";
-            if ((iLi + 0.5) === (Math.round(stars * 2) / 2))
+            if ((iLi + 0.5) == (Math.round(stars * 2) / 2))
                 i.classList.add("fa-star-half-o");
-            else if (iLi < stars)
+            else if (iLi < Math.round(stars))
                 i.classList.add("fa-star");
             else
                 i.classList.add("fa-star-o");
