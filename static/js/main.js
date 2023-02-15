@@ -21,7 +21,7 @@ window.addEventListener("load", function () {
                 jsonFields["boost"][boost.name] = getValue(boost);
             }
         );
-        console.log(json);
+        // console.log(JSON.stringify(json));
         // Invio della query
         fetch('./data/response.json')
             .then((response) => response.json())
@@ -83,13 +83,15 @@ function getValue(input) {
  * @param json corresponding to json movies
  */
 function buildMoviesList(json) {
+    // Save json in session storage
+    sessionStorage.setItem("result", JSON.stringify(json));
     // update #search results
     document.querySelector(".w3ls-news-result span").textContent = json.length;
     // Remove hidden div
     document.querySelector("#home").classList.remove("hide");
     const tbody = document.querySelector("#table-breakpoint tbody");
     let no = 1;
-    for (const movie of json) {
+    for (const serie of json) {
         // No
         const tr = document.createElement("tr");
         let td = document.createElement("td");
@@ -99,34 +101,34 @@ function buildMoviesList(json) {
         td = document.createElement("td");
         td.classList.add("w3-list-img");
         const a = document.createElement("a");
-        a.href = "single.html?docID=" + movie.docID;
+        a.href = "single.html?docID=" + serie.docID;
         td.appendChild(a);
         const img = document.createElement("img");
-        img.src = movie.Poster_Link;
+        img.src = serie.Poster_Link;
         img.alt = "img not available";
         const span = document.createElement("span");
-        span.textContent = movie.Series_Title;
+        span.textContent = serie.Series_Title;
         a.append(img, span);
         tr.appendChild(td);
         // Years
         td = document.createElement("td");
-        td.textContent = movie.Runtime_of_Series;
+        td.textContent = serie.Runtime_of_Series;
         tr.appendChild(td);
         // Certificate
         td = document.createElement("td");
-        td.textContent = movie.Certificate;
+        td.textContent = serie.Certificate;
         tr.appendChild(td);
         // Genre
         td = document.createElement("td");
-        td.textContent = movie.Genre.join(", ");
+        td.textContent = serie.Genre.join(", ");
         tr.appendChild(td);
         // Actors
         td = document.createElement("td");
-        td.textContent = movie.Actors.join(", ");
+        td.textContent = serie.Actors.join(", ");
         tr.appendChild(td);
         // Rating
         td = document.createElement("td");
-        td.textContent = movie.IMDB_Rating;
+        td.textContent = serie.IMDB_Rating;
         tr.appendChild(td);
         // Stars
         td = document.createElement("td");
@@ -147,6 +149,8 @@ function buildMoviesList(json) {
             else
                 i.classList.add("fa-star-o");
             li.appendChild(i);
+            // Send star feedback
+            li.addEventListener("click", () => sendRating(serie.docID, (iLi + 1)));
             ul.appendChild(li);
         }
         blockStars.appendChild(ul);
@@ -164,6 +168,8 @@ function buildMoviesList(json) {
         i.classList.add("fa-thumbs-up");
         i.classList.add("fa-2x");
         li.appendChild(i);
+        // Aggiunge la funzione che invia il like
+        li.addEventListener("click", () => sendLike(serie.docID, true, i));
         ul.appendChild(li);
         li = document.createElement("li");
         i = document.createElement("i");
@@ -171,10 +177,47 @@ function buildMoviesList(json) {
         i.classList.add("fa-thumbs-down");
         i.classList.add("fa-2x");
         li.appendChild(i);
+        // Aggiunge la funzione che invia il dislike
+        li.addEventListener("click", () => sendLike(serie.docID, false, i));
         ul.appendChild(li);
         blockLike.appendChild(ul);
         td.appendChild(blockLike);
         tr.appendChild(td);
         tbody.appendChild(tr);
+    }
+}
+
+/**
+ * Send rating feedback
+ * @param {Number} docID 
+ * @param {Number} rating 
+ * @param {HTMLElement} i optional, indicates the clicked i HTMLElement.
+ */
+function sendRating(docID, rating, i) {
+    if (window.confirm(`Sei sicuro di voler valutare questa serie con ${rating} stelle?`)) {
+        const url = "<ip>/<pagina>?docID=" + docID + "&stars=" + rating;
+        // alert(url);
+        alert("Grazie per aver espresso la tua opinione!");
+        // Coloro la stella selezionata e le precedenti
+        i = 0;
+        document.querySelectorAll(`.block-stars ul`)[docID].childNodes.forEach(li => {
+            if (i++ < rating)
+                li.firstChild.classList.add("active");
+        });
+    }
+}
+
+/**
+ * Send like feedback
+ * @param {Number} docID 
+ * @param {Boolean} like 
+ * @param {HTMLElement} i optional, indicates the clicked i HTMLElement.
+ */
+function sendLike(docID, like, i) {
+    if (window.confirm(`Sei sicuro di voler valutare questa serie ${like ? "positivamente" : "negativamente"}?`)) {
+        const url = "<ip>/<pagina>?docID=" + docID + "&like=" + like;
+        // alert(url);
+        alert("Grazie per aver espresso la tua opinione!");
+        document.querySelectorAll(".block-like ul")[docID][like ? "firstChild" : "lastChild"].firstChild.classList.add("active");
     }
 }
