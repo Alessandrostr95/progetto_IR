@@ -22,6 +22,14 @@ window.addEventListener("load", function () {
             }
         );
         console.log(json);
+        // Invio della query
+        fetch('./data/response.json')
+            .then((response) => response.json())
+            .then((json) => buildMoviesList(json))
+            .catch(err => {
+                this.alert("C'è stato un errore! Vedere la console per ulteriori informazioni");
+                console.log(err)
+            });
         return false;
     }
 
@@ -67,5 +75,106 @@ function getValue(input) {
             return input.checked;
         default:
             break;
+    }
+}
+
+/**
+ * Build movies list by json movies 
+ * @param json corresponding to json movies
+ */
+function buildMoviesList(json) {
+    // update #search results
+    document.querySelector(".w3ls-news-result span").textContent = json.length;
+    // Remove hidden div
+    document.querySelector("#home").classList.remove("hide");
+    const tbody = document.querySelector("#table-breakpoint tbody");
+    let no = 1;
+    for (const movie of json) {
+        // No
+        const tr = document.createElement("tr");
+        let td = document.createElement("td");
+        td.textContent = no++;
+        tr.appendChild(td);
+        // Img & Title
+        td = document.createElement("td");
+        td.classList.add("w3-list-img");
+        const a = document.createElement("a");
+        a.href = "single.html?docID=" + movie.docID;
+        td.appendChild(a);
+        const img = document.createElement("img");
+        img.src = movie.Poster_Link;
+        img.alt = "img not available";
+        const span = document.createElement("span");
+        span.textContent = movie.Series_Title;
+        a.append(img, span);
+        tr.appendChild(td);
+        // Years
+        td = document.createElement("td");
+        td.textContent = movie.Runtime_of_Series;
+        tr.appendChild(td);
+        // Certificate
+        td = document.createElement("td");
+        td.textContent = movie.Certificate;
+        tr.appendChild(td);
+        // Genre
+        td = document.createElement("td");
+        td.textContent = movie.Genre.join(", ");
+        tr.appendChild(td);
+        // Actors
+        td = document.createElement("td");
+        td.textContent = movie.Actors.join(", ");
+        tr.appendChild(td);
+        // Rating
+        td = document.createElement("td");
+        td.textContent = movie.IMDB_Rating;
+        tr.appendChild(td);
+        // Stars
+        td = document.createElement("td");
+        const blockStars = document.createElement("div");
+        blockStars.classList.add("block-stars");
+        let ul = document.createElement("ul");
+        ul.classList.add("w3l-ratings");
+        const stars = 4.5; // Qui ci andrà il numero di stelle dal nuovo field
+        for (let iLi = 0; iLi < 5; iLi++) {
+            const li = document.createElement("li");
+            const i = document.createElement("i");
+            i.classList.add("fa");
+            i["aria-hidden"] = "true";
+            if ((iLi + 0.5) === (Math.round(stars * 2) / 2))
+                i.classList.add("fa-star-half-o");
+            else if (iLi < stars)
+                i.classList.add("fa-star");
+            else
+                i.classList.add("fa-star-o");
+            li.appendChild(i);
+            ul.appendChild(li);
+        }
+        blockStars.appendChild(ul);
+        td.appendChild(blockStars);
+        tr.appendChild(td);
+        // Like
+        td = document.createElement("td");
+        const blockLike = document.createElement("div");
+        blockLike.classList.add("block-like");
+        ul = document.createElement("ul");
+        ul.classList.add("w3l-ratings");
+        li = document.createElement("li");
+        i = document.createElement("i");
+        i.classList.add("fa");
+        i.classList.add("fa-thumbs-up");
+        i.classList.add("fa-2x");
+        li.appendChild(i);
+        ul.appendChild(li);
+        li = document.createElement("li");
+        i = document.createElement("i");
+        i.classList.add("fa");
+        i.classList.add("fa-thumbs-down");
+        i.classList.add("fa-2x");
+        li.appendChild(i);
+        ul.appendChild(li);
+        blockLike.appendChild(ul);
+        td.appendChild(blockLike);
+        tr.appendChild(td);
+        tbody.appendChild(tr);
     }
 }
