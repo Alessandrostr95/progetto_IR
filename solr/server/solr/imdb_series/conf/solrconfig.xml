@@ -972,12 +972,6 @@
        See https://solr.apache.org/guide/solr/latest/indexing-guide/schemaless-mode.html for further explanation.
 
     -->
-  <!-- Aggiunto -->
-  <!--schemaFactory class="ManagedIndexSchemaFactory">
-    <bool name="mutable">false</bool>
-    <str name="managedSchemaResourceName">managed-schema.xml</str>
-  </schemaFactory-->
-  <!--/ Aggiunto -->
   <updateProcessor class="solr.UUIDUpdateProcessorFactory" name="uuid"/>
   <updateProcessor class="solr.RemoveBlankFieldUpdateProcessorFactory" name="remove-blank"/>
   <updateProcessor class="solr.FieldNameMutatingUpdateProcessorFactory" name="field-name-mutating">
