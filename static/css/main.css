@@ -1,5 +1,6 @@
 #advanced_params:hover,
-.block-like i:hover {
+.block-like i:hover,
+.block-like i.active {
     color: #FF8D1B !important;
     transition: .5s ease-in-out;
     cursor: pointer;
@@ -23,13 +24,14 @@
     margin: 0 2px;
 }
 
-.block-stars:hover i{
+.block-stars:hover i,
+.block-stars i.active {
     color: rgb(8, 5, 79);
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
 
-.block-stars>ul>li:hover ~ li>i{
+.block-stars>ul>li:hover~li>i {
     color: #FF8D1B !important;
 }
 
@@ -39,11 +41,12 @@
     margin: 0 7px;
 }
 
-.block-like, .block-stars{
+.block-like,
+.block-stars {
     width: max-content;
 }
 
 /* Non wrappare gli anni */
-#table-breakpoint tr>td:nth-child(3){
+#table-breakpoint tr>td:nth-child(3) {
     white-space: nowrap;
 }
