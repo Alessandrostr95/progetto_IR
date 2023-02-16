@@ -1,6 +1,7 @@
 window.addEventListener("load", function () {
     const search_form = document.getElementById("search_form");
     search_form.onsubmit = (e) => {
+        e.preventDefault();
         const fields = document.querySelectorAll(".read-value");
         const json = { fields: {} };
         jsonFields = json["fields"];
@@ -21,16 +22,29 @@ window.addEventListener("load", function () {
                 jsonFields["boost"][boost.name] = getValue(boost);
             }
         );
-        // console.log(JSON.stringify(json));
+        console.log(JSON.stringify(json));
         // Invio della query
-        fetch('./data/response.json')
-            .then((response) => response.json())
+        // Uncomment the following lines for fetching to spring server
+        fetch('http://localhost:8088/', { //http://locahost:8088/ //https://cat-fact.herokuapp.com/facts
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(json) // body data type must match "Content-Type" header
+        }).then((response) => response.json())
             .then((json) => buildMoviesList(json))
             .catch(err => {
                 this.alert("C'è stato un errore! Vedere la console per ulteriori informazioni");
                 console.log(err)
             });
-        return false;
+
+        // Comment the following lines after decomment the previous 
+        // this.fetch("./data/response.json").then((response) => response.json())
+        //     .then((json) => buildMoviesList(json))
+        //     .catch(err => {
+        //         this.alert("C'è stato un errore! Vedere la console per ulteriori informazioni");
+        //         console.log(err)
+        //     });
     }
 
     // Show/hide advanced params onclick function
@@ -41,6 +55,9 @@ window.addEventListener("load", function () {
         icon.classList.toggle("fa-arrow-up");
         icon.classList.toggle("fa-arrow-down");
     }
+
+    // Send relevance feedback on refresh click
+    this.document.querySelector("#refresh").addEventListener("click", sendLikes);
 });
 
 // Return an array of the selected opion values
@@ -95,7 +112,7 @@ function buildMoviesList(json) {
         // No
         const tr = document.createElement("tr");
         let td = document.createElement("td");
-        td.textContent = no++;
+        td.textContent = no;
         tr.appendChild(td);
         // Img & Title
         td = document.createElement("td");
@@ -167,9 +184,10 @@ function buildMoviesList(json) {
         i.classList.add("fa");
         i.classList.add("fa-thumbs-up");
         i.classList.add("fa-2x");
-        li.appendChild(i);
         // Aggiunge la funzione che invia il like
-        li.addEventListener("click", () => sendLike(serie.docID, true, i));
+        i.addEventListener("click", (e) => e.target.classList.toggle("active"));
+        li.appendChild(i);
+        // li.addEventListener("click", () => like(no-1, true, i));
         ul.appendChild(li);
         li = document.createElement("li");
         i = document.createElement("i");
@@ -178,19 +196,20 @@ function buildMoviesList(json) {
         i.classList.add("fa-2x");
         li.appendChild(i);
         // Aggiunge la funzione che invia il dislike
-        li.addEventListener("click", () => sendLike(serie.docID, false, i));
+        li.addEventListener("click", (e) => e.target.classList.toggle("active"));
         ul.appendChild(li);
         blockLike.appendChild(ul);
         td.appendChild(blockLike);
         tr.appendChild(td);
         tbody.appendChild(tr);
+        no++;
     }
 }
 
 /**
  * Send rating feedback
- * @param {Number} docID 
- * @param {Number} rating 
+ * @param {number} docID 
+ * @param {number} rating 
  * @param {HTMLElement} i optional, indicates the clicked i HTMLElement.
  */
 function sendRating(docID, rating, i) {
@@ -212,12 +231,27 @@ function sendRating(docID, rating, i) {
  * @param {Number} docID 
  * @param {Boolean} like 
  * @param {HTMLElement} i optional, indicates the clicked i HTMLElement.
+ * @param {MouseEvent} e 
  */
-function sendLike(docID, like, i) {
-    if (window.confirm(`Sei sicuro di voler valutare questa serie ${like ? "positivamente" : "negativamente"}?`)) {
-        const url = "<ip>/<pagina>?docID=" + docID + "&like=" + like;
-        // alert(url);
-        alert("Grazie per aver espresso la tua opinione!");
-        document.querySelectorAll(".block-like ul")[docID][like ? "firstChild" : "lastChild"].firstChild.classList.add("active");
-    }
+function like(e) {
+    // if (window.confirm(`Sei sicuro di voler valutare questa serie ${like ? "positivamente" : "negativamente"}?`)) {
+    //     const url = "<ip>/<pagina>?docID=" + docID + "&like=" + like;
+    //     // alert(url);
+    //     alert("Grazie per aver espresso la tua opinione!");
+    // console.log(i);
+    e.target.classList.toggle("active");
+    // i.classList.toggle("active");
+    // document.querySelectorAll(".block-like ul")[docID][like ? "firstChild" : "lastChild"].firstChild.classList.toggle("active");
+    // }
+}
+
+/**
+ * Send selected like and dislike when refresh is clicked
+ */
+function sendLikes() {
+    const relevants = [];
+    // Selects every i that has active class
+    document.querySelectorAll(".block like i.active").forEach(i => {
+        // TODO: Selects every li with active class and insert in relevants list
+    })
 }

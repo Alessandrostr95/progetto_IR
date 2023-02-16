@@ -50,3 +50,18 @@
 #table-breakpoint tr>td:nth-child(3) {
     white-space: nowrap;
 }
+
+.w3ls-news-result{
+    display: flex;
+    justify-content: space-between;
+}
+
+.w3ls-news-result>h4{
+    align-self: center;
+}
+
+#refresh{
+    float: right;
+    border-radius: 25px;
+    width: 10%;
+}
