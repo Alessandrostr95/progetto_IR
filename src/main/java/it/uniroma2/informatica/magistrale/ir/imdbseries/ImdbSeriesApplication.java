@@ -108,13 +108,26 @@ public class ImdbSeriesApplication {
 
 		final SolrClient solrClient = getClient();
 
-		// TODO: implements boosting
-		// final Map<String, Object> boost = (Map<String, Object>) fields.getOrDefault(QueryParam.BOOST.toString(), null);
-
 		final SolrQuery query = new SolrQuery();
 		final String query_string = buildQuery(fields);
 		query.setQuery(query_string);
 		query.setRows(Integer.MAX_VALUE);
+
+		final Map<String, Object> boost = (Map<String, Object>) fields.getOrDefault(QueryParam.BOOST.toString(), null);
+		if (boost != null) {
+			query.setParam(QueryParam.DEF_TYPE.toString(), QueryParam.EDISMAX.toString());
+			final boolean imdb_rating = (boolean) boost.getOrDefault(QueryParam.IMDB_RATING.toString(), true);
+			final boolean no_of_votes = (boolean) boost.getOrDefault(QueryParam.VOTES.toString(), false);
+
+			final ArrayList<String> bf = new ArrayList<String>();
+			if (imdb_rating) {
+				bf.add(QueryParam.IMDB_RATING.toString());
+			}
+			if (no_of_votes) {
+				bf.add(QueryParam.VOTES.toString());
+			}
+			query.setParam("bf", String.join(" ", bf));
+		}
 
 		final QueryResponse response;
 		try {

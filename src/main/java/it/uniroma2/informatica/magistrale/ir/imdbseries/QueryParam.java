@@ -12,7 +12,9 @@ public enum QueryParam {
     FIELDS("fields"),
     OP("op"),
     VALUES("values"),
-    BOOST("boost");
+    BOOST("boost"),
+    DEF_TYPE("defType"),
+    EDISMAX("edismax");
 
 
     private String literalForm;
