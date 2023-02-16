@@ -185,7 +185,7 @@ function buildMoviesList(json) {
         i.classList.add("fa-thumbs-up");
         i.classList.add("fa-2x");
         // Aggiunge la funzione che invia il like
-        i.addEventListener("click", (e) => e.target.classList.toggle("active"));
+        li.addEventListener("click", (e) => e.target.classList.toggle("active"));
         li.appendChild(i);
         // li.addEventListener("click", () => like(no-1, true, i));
         ul.appendChild(li);
