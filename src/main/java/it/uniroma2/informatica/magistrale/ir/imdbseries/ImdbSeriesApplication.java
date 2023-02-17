@@ -23,6 +23,8 @@ public class ImdbSeriesApplication {
 
 	static String SOLR_URL = "http://localhost:8983/solr";
 	static String SOLR_COLLECTION = "imdb_series";
+	private final SolrClient solrClient = getClient();
+	private final Map<Integer, Rating> rating = new HashMap<>();
 
 	public static void main(String[] args) {
 		SpringApplication.run(ImdbSeriesApplication.class, args);
@@ -30,7 +32,7 @@ public class ImdbSeriesApplication {
 
 	/**
 	 * Metodo di prova per i parametri della query
-	 * */
+	 */
 	@CrossOrigin(origins = "*")
 	@GetMapping("/query")
 	public String hello(
@@ -64,6 +66,7 @@ public class ImdbSeriesApplication {
 		return values_field;
 	}
 
+	@SuppressWarnings("unchecked")
 	private String buildQuery(Map<String, Object> fields) {
 		if (fields == null) {
 			return "*:*";
@@ -72,7 +75,8 @@ public class ImdbSeriesApplication {
 		final String title = (String) fields.getOrDefault(QueryParam.TITLE.toString(), "*");
 		final String overview = (String) fields.getOrDefault(QueryParam.OVERVIEW.toString(), "*");
 		final Map<String, Object> genre = (Map<String, Object>) fields.getOrDefault(QueryParam.GENRE.toString(), null);
-		final Map<String, Object> actors = (Map<String, Object>) fields.getOrDefault(QueryParam.ACTORS.toString(), null);
+		final Map<String, Object> actors = (Map<String, Object>) fields.getOrDefault(QueryParam.ACTORS.toString(),
+				null);
 
 		String query = "";
 
@@ -101,15 +105,13 @@ public class ImdbSeriesApplication {
 
 	@CrossOrigin(origins = "*")
 	@PostMapping("/")
+	@SuppressWarnings("unchecked")
 	public List<SolrDocument> onQuery(@RequestBody Map<String, Object> payload) {
-		final Map<String, Object> fields = (Map<String, Object> ) payload.getOrDefault(QueryParam.FIELDS.toString(), null);
-
-		final SolrClient solrClient = getClient();
+		final Map<String, Object> fields = (Map<String, Object>) payload.getOrDefault(QueryParam.FIELDS.toString(),
+				null);
 
 		final SolrQuery query = new SolrQuery();
-		final String query_string = buildQuery(fields);
-		query.setQuery(query_string);
-		query.setRows(Integer.MAX_VALUE);
+		String query_string = buildQuery(fields);
 
 		final Map<String, Object> boost = (Map<String, Object>) fields.getOrDefault(QueryParam.BOOST.toString(), null);
 		if (boost != null) {
@@ -125,7 +127,18 @@ public class ImdbSeriesApplication {
 				bf.add(QueryParam.VOTES.toString());
 			}
 			query.setParam("bf", String.join(" ", bf));
+
+			// Add stars boost
+			final boolean avgStars = (boolean) boost.getOrDefault(QueryParam.STARS.toString(), false);
+			if (avgStars) {
+				query_string += "docID:(";
+				for (Integer docID : this.rating.keySet())
+					query_string += docID + "^" + this.rating.get(docID).getAvgStars() + " ";
+				query_string += ")";
+			}
 		}
+		query.setQuery(query_string);
+		query.setRows(Integer.MAX_VALUE);
 
 		final QueryResponse response;
 		try {
@@ -145,6 +158,50 @@ public class ImdbSeriesApplication {
 		}
 
 		return result;
+	}
+
+	/**
+	 * Read old query and relevant and non relevants docID and returns a new ranking
+	 * with rocchio algorithm
+	 * 
+	 * @param payload json req
+	 * @return new documents ranking
+	 */
+	@SuppressWarnings("unchecked")
+	@CrossOrigin(origins = "*")
+	@PostMapping("/rf")
+	public List<SolrDocument> relevanceFeedback(@RequestBody Map<String, Object> payload) {
+		final Map<String, Object> fields = (Map<String, Object>) payload.getOrDefault(QueryParam.FIELDS.toString(),
+				null);
+		final List<Integer> relevants = (List<Integer>) payload.getOrDefault(QueryParam.RELEVANTS.toString(), null);
+		final List<Integer> nonRelevants = (List<Integer>) payload.getOrDefault(QueryParam.NON_RELEVANTS.toString(),
+				null);
+		System.out.println("New relevance feedback request:");
+		System.out.println(fields);
+		System.out.println(relevants);
+		System.out.println(nonRelevants);
+		return new LinkedList<>();
+	}
+
+	/**
+	 * Read and update serie rating
+	 * 
+	 * @param payload json req
+	 * @return json res
+	 */
+	@CrossOrigin(origins = "*")
+	@GetMapping("/rating")
+	public Map<String, Object> updateRating(
+			@RequestParam(value = "docID", defaultValue = "") int docID,
+			@RequestParam(value = "stars", required = true) int stars) {
+		final Map<String, Object> res = new HashMap<>();
+		System.out.println("New rating request: \ndocID: " + docID + "\nstars:" + stars);
+		this.rating.putIfAbsent(docID, new Rating());
+		this.rating.get(docID).addRating(stars);
+		res.put("status", 200);
+		res.put("docID", docID);
+		res.put("avgStars", this.rating.get(docID).getAvgStars());
+		return res;
 	}
 
 	private SolrClient getClient() {

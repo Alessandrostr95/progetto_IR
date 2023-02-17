@@ -111,6 +111,8 @@ function getValue(input) {
  * @param req corresponding to req movies
  */
 function buildMoviesList(req) {
+    // Pulisci le vecchia richiesta
+    document.querySelector("#table-breakpoint tbody").innerHTML = "";
     // Save req in session storage
     sessionStorage.setItem("result", JSON.stringify(req));
     // update #search results
@@ -178,7 +180,7 @@ function buildMoviesList(req) {
                 i.classList.add("fa-star-o");
             li.appendChild(i);
             // Send star feedback
-            li.addEventListener("click", () => sendRating(serie.docID, (iLi + 1)));
+            li.addEventListener("click", (e) => sendRating(serie.docID, (iLi + 1), e));
             ul.appendChild(li);
         }
         blockStars.appendChild(ul);
@@ -223,20 +225,33 @@ function buildMoviesList(req) {
  * Send rating feedback
  * @param {number} docID 
  * @param {number} rating 
- * @param {HTMLElement} i optional, indicates the clicked i HTMLElement.
+ * @param {HTMLElement} e n-th block stars element 
  */
-function sendRating(docID, rating, i) {
+function sendRating(docID, rating, e) {
+    console.log(e);
     if (window.confirm(`Sei sicuro di voler valutare questa serie con ${rating} stelle?`)) {
-        const url = "<ip>/<pagina>?docID=" + docID + "&stars=" + rating;
-        // alert(url);
-        alert("Grazie per aver espresso la tua opinione!");
         // Coloro la stella selezionata e le precedenti
         i = 0;
-        document.querySelectorAll(`.block-stars ul`)[docID].childNodes.forEach(li => {
+        e.target.classList.add("active");
+        // document.querySelectorAll(`.block-stars ul`)[i].childNodes.forEach(li => {
+        e.target.parentElement.parentElement.childNodes.forEach(li => {
             if (i++ < rating)
                 li.firstChild.classList.add("active");
         });
-        // TODO: insert fetch
+        fetch("http://localhost:8088/rating?" + new URLSearchParams({
+            "docID": docID,
+            "stars": rating
+        })).then((response) => response.json())//response.json())
+            .then((res) => {
+                if (res.status == 200) {
+                    console.log(res);
+                    alert("Grazie per aver espresso la tua opinione!");
+                }
+            })
+            .catch(err => {
+                this.alert("C'è stato un errore! Vedere la console per ulteriori informazioni");
+                console.log(err)
+            });
     }
 }
 
@@ -257,7 +272,18 @@ function sendLikes() {
         }
         // Remove active class from every i element
         document.querySelectorAll(".block-like i.active").forEach(i => i.classList.remove("active"));
-        // TODO: insert fetch
-        alert("Grazie per aver espresso la tua preferenza!")
+        fetch("http://localhost:8088/rf", {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(req) // body data type must match "Content-Type" header
+        }).then((response) => response.json())//response.json())
+            .then((json) => console.log(json))
+            .catch(err => {
+                this.alert("C'è stato un errore! Vedere la console per ulteriori informazioni");
+                console.log(err)
+            });
+        alert("Grazie per aver espresso la tua preferenza!");
     }
 }
