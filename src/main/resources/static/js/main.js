@@ -15,7 +15,7 @@ window.addEventListener("load", function () {
             },
             body: JSON.stringify(req) // body data type must match "Content-Type" header
         }).then((response) => response.json())//response.json())
-            .then((json) => {console.log(json);alert("Arrivato: "+JSON.stringify(json))})//buildMoviesList(json))
+            .then((json) => buildMoviesList(json))
             .catch(err => {
                 this.alert("C'è stato un errore! Vedere la console per ulteriori informazioni");
                 console.log(err)

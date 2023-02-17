@@ -17,7 +17,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.*;
 
-
 @SpringBootApplication
 @RestController
 public class ImdbSeriesApplication {
@@ -31,14 +30,13 @@ public class ImdbSeriesApplication {
 
 	/**
 	 * Metodo di prova per i parametri della query
-	 * */
+	 */
 	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@GetMapping("/query")
 	public String hello(
 			@RequestParam(value = "desc", defaultValue = "") String desc,
 			@RequestParam(value = "title", required = false) String title,
-			@RequestParam(value = "genre") String[] genre
-		) {
+			@RequestParam(value = "genre") String[] genre) {
 		JSONObject jsonObject = new JSONObject();
 		try {
 			jsonObject
@@ -63,7 +61,7 @@ public class ImdbSeriesApplication {
 		if (values.size() > 1) {
 			values_field = "(" + values_field + ")";
 		}
-		return  values_field;
+		return values_field;
 	}
 
 	private String buildQuery(Map<String, Object> fields) {
@@ -74,12 +72,13 @@ public class ImdbSeriesApplication {
 		final String title = (String) fields.getOrDefault(QueryParam.TITLE.toString(), "*");
 		final String overview = (String) fields.getOrDefault(QueryParam.OVERVIEW.toString(), "*");
 		final Map<String, Object> genre = (Map<String, Object>) fields.getOrDefault(QueryParam.GENRE.toString(), null);
-		final Map<String, Object> actors = (Map<String, Object>) fields.getOrDefault(QueryParam.ACTORS.toString(), null);
+		final Map<String, Object> actors = (Map<String, Object>) fields.getOrDefault(QueryParam.ACTORS.toString(),
+				null);
 
 		String query = "";
 
-		query += QueryParam.TITLE + ":" + (title == "*" ? title : "\"" +  title + "\"");
-		query += " " + QueryParam.OVERVIEW + ":" + (overview == "*" ? overview : "\"" +  overview + "\"");
+		query += QueryParam.TITLE + ":" + (title == "*" ? title : "\"" + title + "\"");
+		query += " " + QueryParam.OVERVIEW + ":" + (overview == "*" ? overview : "\"" + overview + "\"");
 
 		if (genre != null) {
 			ArrayList<String> genre_list = (ArrayList<String>) genre.get(QueryParam.VALUES.toString());
@@ -97,7 +96,8 @@ public class ImdbSeriesApplication {
 			}
 		}
 
-		// TODO: indagare perché lo stampa due volte (i.e. perché la funzione viene chiamata due volte).
+		// TODO: indagare perché lo stampa due volte (i.e. perché la funzione viene
+		// chiamata due volte).
 		System.out.println(query);
 		return query;
 	}
@@ -105,8 +105,9 @@ public class ImdbSeriesApplication {
 	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@PostMapping("/")
 	public List<SolrDocument> onQuery(@RequestBody Map<String, Object> payload) {
-		final Map<String, Object> fields = (Map<String, Object> ) payload.getOrDefault(QueryParam.FIELDS.toString(), null);
-		buildQuery(fields);
+		final Map<String, Object> fields = (Map<String, Object>) payload.getOrDefault(QueryParam.FIELDS.toString(),
+				null);
+		// buildQuery(fields);
 
 		final SolrClient solrClient = getClient();
 
