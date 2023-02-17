@@ -32,7 +32,7 @@ public class ImdbSeriesApplication {
 	/**
 	 * Metodo di prova per i parametri della query
 	 * */
-	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@CrossOrigin(origins = "*")
 	@GetMapping("/query")
 	public String hello(
 			@RequestParam(value = "desc", defaultValue = "") String desc,
@@ -102,11 +102,10 @@ public class ImdbSeriesApplication {
 		return query;
 	}
 
-	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@CrossOrigin(origins = "*")
 	@PostMapping("/")
 	public List<SolrDocument> onQuery(@RequestBody Map<String, Object> payload) {
 		final Map<String, Object> fields = (Map<String, Object> ) payload.getOrDefault(QueryParam.FIELDS.toString(), null);
-		buildQuery(fields);
 
 		final SolrClient solrClient = getClient();
 
