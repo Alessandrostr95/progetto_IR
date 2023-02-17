@@ -1,0 +1,219 @@
+[
+  {
+    "Poster_Link": "https:\/\/m.media-amazon.com\/images\/M\/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UY98_CR2,0,67,98_AL_.jpg",
+    "Series_Title": "Game of Thrones",
+    "Runtime_of_Series": "(2011\u20132019)",
+    "Certificate": "A",
+    "Runtime_of_Episodes": "57 min",
+    "Genre": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "IMDB_Rating": 9.3,
+    "Overview": "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.",
+    "No_of_Votes": 1773458,
+    "docID": 0,
+    "Actors": [
+      "Emilia Clarke",
+      "Peter Dinklage",
+      "Kit Harington",
+      "Lena Headey"
+    ]
+  },
+  {
+    "Poster_Link": "https:\/\/m.media-amazon.com\/images\/M\/MV5BMjhiMzgxZTctNDc1Ni00OTIxLTlhMTYtZTA3ZWFkODRkNmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY98_CR1,0,67,98_AL_.jpg",
+    "Series_Title": "Breaking Bad",
+    "Runtime_of_Series": "(2008\u20132013)",
+    "Certificate": "18",
+    "Runtime_of_Episodes": "49 min",
+    "Genre": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "IMDB_Rating": 9.5,
+    "Overview": "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
+    "No_of_Votes": 1468887,
+    "docID": 1,
+    "Actors": [
+      "Bryan Cranston",
+      "Aaron Paul",
+      "Anna Gunn",
+      "Betsy Brandt"
+    ]
+  },
+  {
+    "Poster_Link": "https:\/\/m.media-amazon.com\/images\/M\/MV5BMTc5ZmM0OTQtNDY4MS00ZjMyLTgwYzgtOGY0Y2VlMWFmNDU0XkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "The Walking Dead",
+    "Runtime_of_Series": "(2010\u2013 )",
+    "Certificate": "18+",
+    "Runtime_of_Episodes": "44 min",
+    "Genre": [
+      "Drama",
+      "Horror",
+      "Thriller"
+    ],
+    "IMDB_Rating": 8.2,
+    "Overview": "Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins and must lead a group of survivors to stay alive.",
+    "No_of_Votes": 854698,
+    "docID": 2,
+    "Actors": [
+      "Andrew Lincoln",
+      "Norman Reedus",
+      "Melissa McBride",
+      "Danai Gurira"
+    ]
+  },
+  {
+    "Poster_Link": "https:\/\/m.media-amazon.com\/images\/M\/MV5BNDVkYjU0MzctMWRmZi00NTkxLTgwZWEtOWVhYjZlYjllYmU4XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "Friends",
+    "Runtime_of_Series": "(1994\u20132004)",
+    "Certificate": "13+",
+    "Runtime_of_Episodes": "22 min",
+    "Genre": [
+      "Comedy",
+      "Romance"
+    ],
+    "IMDB_Rating": 8.9,
+    "Overview": "Follows the personal and professional lives of six twenty to thirty-something-year-old friends living in Manhattan.",
+    "No_of_Votes": 829816,
+    "docID": 3,
+    "Actors": [
+      "Jennifer Aniston",
+      "Courteney Cox",
+      "Lisa Kudrow",
+      "Matt LeBlanc"
+    ]
+  },
+  {
+    "Poster_Link": "https:\/\/m.media-amazon.com\/images\/M\/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "Stranger Things",
+    "Runtime_of_Series": "(2016\u2013 )",
+    "Certificate": "15",
+    "Runtime_of_Episodes": "51 min",
+    "Genre": [
+      "Drama",
+      "Fantasy",
+      "Horror"
+    ],
+    "IMDB_Rating": 8.7,
+    "Overview": "When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces in order to get him back.",
+    "No_of_Votes": 824966,
+    "docID": 4,
+    "Actors": [
+      "Millie Bobby Brown",
+      "Finn Wolfhard",
+      "Winona Ryder",
+      "David Harbour"
+    ]
+  },
+  {
+    "Poster_Link": "https:\/\/m.media-amazon.com\/images\/M\/MV5BMWY3NTljMjEtYzRiMi00NWM2LTkzNjItZTVmZjE0MTdjMjJhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTQ4NTc5OTU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "Sherlock",
+    "Runtime_of_Series": "(2010\u20132017)",
+    "Certificate": "UA",
+    "Runtime_of_Episodes": "88 min",
+    "Genre": [
+      "Crime",
+      "Drama",
+      "Mystery"
+    ],
+    "IMDB_Rating": 9.1,
+    "Overview": "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.",
+    "No_of_Votes": 808717,
+    "docID": 5,
+    "Actors": [
+      "Benedict Cumberbatch",
+      "Martin Freeman",
+      "Una Stubbs",
+      "Rupert Graves"
+    ]
+  },
+  {
+    "Poster_Link": "https:\/\/m.media-amazon.com\/images\/M\/MV5BY2FmZTY5YTktOWRlYy00NmIyLWE0ZmQtZDg2YjlmMzczZDZiXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "The Big Bang Theory",
+    "Runtime_of_Series": "(2007\u20132019)",
+    "Certificate": "U",
+    "Runtime_of_Episodes": "22 min",
+    "Genre": [
+      "Comedy",
+      "Romance"
+    ],
+    "IMDB_Rating": 8.1,
+    "Overview": "A woman who moves into an apartment across the hall from two brilliant but socially awkward physicists shows them how little they know about life outside of the laboratory.",
+    "No_of_Votes": 724187,
+    "docID": 6,
+    "Actors": [
+      "Johnny Galecki",
+      "Jim Parsons",
+      "Kaley Cuoco",
+      "Simon Helberg"
+    ]
+  },
+  {
+    "Poster_Link": "https:\/\/m.media-amazon.com\/images\/M\/MV5BMTM5MjkwMTI0MV5BMl5BanBnXkFtZTcwODQwMTc0OQ@@._V1_UY98_CR2,0,67,98_AL_.jpg",
+    "Series_Title": "Dexter",
+    "Runtime_of_Series": "(2006\u20132021)",
+    "Certificate": "A",
+    "Runtime_of_Episodes": "53 min",
+    "Genre": [
+      "Crime",
+      "Drama",
+      "Mystery"
+    ],
+    "IMDB_Rating": 8.6,
+    "Overview": "By day, mild-mannered Dexter is a blood-spatter analyst for the Miami police. But at night, he is a serial killer who only targets other murderers.",
+    "No_of_Votes": 647136,
+    "docID": 7,
+    "Actors": [
+      "Michael C. Hall",
+      "Jennifer Carpenter",
+      "David Zayas",
+      "James Remar"
+    ]
+  },
+  {
+    "Poster_Link": "https:\/\/m.media-amazon.com\/images\/M\/MV5BNjg1MDQ5MjQ2N15BMl5BanBnXkFtZTYwNjI5NjA3._V1_UY98_CR3,0,67,98_AL_.jpg",
+    "Series_Title": "How I Met Your Mother",
+    "Runtime_of_Series": "(2005\u20132014)",
+    "Certificate": "15+",
+    "Runtime_of_Episodes": "22 min",
+    "Genre": [
+      "Comedy",
+      "Romance"
+    ],
+    "IMDB_Rating": 8.3,
+    "Overview": "A father recounts to his children - through a series of flashbacks - the journey he and his four best friends took leading up to him meeting their mother.",
+    "No_of_Votes": 603824,
+    "docID": 8,
+    "Actors": [
+      "Josh Radnor",
+      "Jason Segel",
+      "Cobie Smulders",
+      "Neil Patrick Harris"
+    ]
+  },
+  {
+    "Poster_Link": "https:\/\/m.media-amazon.com\/images\/M\/MV5BMTUwMGM2ZmYtZGEyZC00OWQyLWI2Y2QtMTdjYzMxZGJmNjhjXkEyXkFqcGdeQXVyNjU2ODM5MjU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "True Detective",
+    "Runtime_of_Series": "(2014\u2013 )",
+    "Certificate": "A",
+    "Runtime_of_Episodes": "55 min",
+    "Genre": [
+      "Crime",
+      "Drama",
+      "Mystery"
+    ],
+    "IMDB_Rating": 9.0,
+    "Overview": "Seasonal anthology series in which police investigations unearth the personal and professional secrets of those involved, both within and outside the law.",
+    "No_of_Votes": 500194,
+    "docID": 9,
+    "Actors": [
+      "Vince Vaughn",
+      "Colin Farrell",
+      "Rachel McAdams",
+      "Taylor Kitsch"
+    ]
+  }
+]
