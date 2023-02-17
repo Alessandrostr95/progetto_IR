@@ -30,13 +30,8 @@ public class ImdbSeriesApplication {
 
 	/**
 	 * Metodo di prova per i parametri della query
-<<<<<<< HEAD
 	 * */
 	@CrossOrigin(origins = "*")
-=======
-	 */
-	@CrossOrigin(origins = "http://127.0.0.1:5500")
->>>>>>> 84f7a410d2d38508f2723fcf5ccdcedf8530c066
 	@GetMapping("/query")
 	public String hello(
 			@RequestParam(value = "desc", defaultValue = "") String desc,
@@ -77,8 +72,7 @@ public class ImdbSeriesApplication {
 		final String title = (String) fields.getOrDefault(QueryParam.TITLE.toString(), "*");
 		final String overview = (String) fields.getOrDefault(QueryParam.OVERVIEW.toString(), "*");
 		final Map<String, Object> genre = (Map<String, Object>) fields.getOrDefault(QueryParam.GENRE.toString(), null);
-		final Map<String, Object> actors = (Map<String, Object>) fields.getOrDefault(QueryParam.ACTORS.toString(),
-				null);
+		final Map<String, Object> actors = (Map<String, Object>) fields.getOrDefault(QueryParam.ACTORS.toString(), null);
 
 		String query = "";
 
@@ -101,8 +95,6 @@ public class ImdbSeriesApplication {
 			}
 		}
 
-		// TODO: indagare perché lo stampa due volte (i.e. perché la funzione viene
-		// chiamata due volte).
 		System.out.println(query);
 		return query;
 	}
@@ -110,13 +102,7 @@ public class ImdbSeriesApplication {
 	@CrossOrigin(origins = "*")
 	@PostMapping("/")
 	public List<SolrDocument> onQuery(@RequestBody Map<String, Object> payload) {
-<<<<<<< HEAD
 		final Map<String, Object> fields = (Map<String, Object> ) payload.getOrDefault(QueryParam.FIELDS.toString(), null);
-=======
-		final Map<String, Object> fields = (Map<String, Object>) payload.getOrDefault(QueryParam.FIELDS.toString(),
-				null);
-		// buildQuery(fields);
->>>>>>> 84f7a410d2d38508f2723fcf5ccdcedf8530c066
 
 		final SolrClient solrClient = getClient();
 
