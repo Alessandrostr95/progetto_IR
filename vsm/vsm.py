@@ -176,6 +176,20 @@ def sub(x : dict, y : dict) -> dict:
         **Sparse** implementation of subtract operator.
     """
     return add(x, mult(y, -1))
+
+def mean(vectors : list[dict]) -> dict:
+    """
+        **Sparse** implementation of mean vector.
+    """
+    mu = dict()
+
+    if (N := len(vectors)) == 0:
+        return mu
+    
+    for v in vectors:
+        mu = add(mu, v)
+
+    return mult(mu, 1/N)
     
 
 ## STRING PROCESSING
