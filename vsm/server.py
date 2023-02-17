@@ -47,6 +47,13 @@ def rocchio(
 
 @app.route('/rf_score', methods=['POST'])
 def rf_score():
+    """
+        Post json params:
+            - `fields`: user query representation.
+            - `relevants`: a list of **relevants** docIDs.
+            - `non-relevents`: a list of **relevants** docIDs.
+            - `k`: filter the **top k**.
+    """
 
     content_type = request.headers.get('Content-Type')
     if content_type != 'application/json':
@@ -58,6 +65,7 @@ def rf_score():
     query = data.get('fields', dict())
     relevants = data.get('relevants', [])
     non_relevants = data.get('non-relevants', [])
+    k = int(data.get('k', -1))
     
     query_str = query.get(vsm.TITLE, '') + query.get(vsm.OVERVIEW, '')
     query_vec = vsm.query2vec(query_str, DF)
@@ -80,7 +88,10 @@ def rf_score():
 
     r = requests.post(
         f'{URL}/score',
-        json = { 'query' : new_query_vec },
+        json = {
+            'query' : new_query_vec,
+            'k' : k
+        },
         headers = headers
     )
 
@@ -97,6 +108,7 @@ def score():
     """
         The post body is a json with this content:
             - `query`: a **sparse** representation of the query.
+            - `k`: filter the **top k** docID. If absent or -1 returns all.
         Returns a **map** s.t. for each docID we have the **cosine similarity**.
     """
     content_type = request.headers.get('Content-Type')
@@ -110,11 +122,18 @@ def score():
     query = data.get('query', dict())
     result = {}
     for doc in DATA:
-        id = doc['docID']
+        id = int(doc['docID'])
         if (vec := TF_IDF.get(id, None)):
             result[id] = vsm.cosine_similarity(query, vec)
 
-    return result
+    k = int(data.get('k', -1))
+
+    if k == -1:
+        return result
+    
+    rank = list(result.items())
+    rank.sort(key=lambda x: x[1], reverse=True)
+    return dict(rank[:min(k, len(rank))])
 
 @app.route('/rocchio', methods=['POST'])
 def relevance_feedback():
