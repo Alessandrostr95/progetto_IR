@@ -10,15 +10,11 @@ import org.apache.solr.common.SolrDocumentList;
 import org.json.JSONException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -27,6 +23,7 @@ import java.util.Map.Entry;
 public class ImdbSeriesApplication {
 
 	static String SOLR_URL = "http://localhost:8983/solr";
+	static String FLASK_URL = "http://localhost:5000/rf_score";
 	static String SOLR_COLLECTION = "imdb_series";
 	private final SolrClient solrClient = getClient();
 	private final Map<Integer, Rating> rating = new HashMap<>();
@@ -57,6 +54,24 @@ public class ImdbSeriesApplication {
 		return jsonObject.toString();
 	}
 
+	/**
+	 * Given <b>multivalued</b> field values (as {@code List<String>}) and an operator (as {@code String})
+	 * returns a concatenation of values separated by operator.<br><br>
+	 *
+	 * <b>Example</b>:
+	 * <ul>
+	 *     <li>
+	 *         {@code values = ["Comedy", "Action"], operator = "AND"} will return the string {@code "(\"Comedy\" AND \"Action\")"}
+	 *     </li>
+	 *     <li>
+	 *         {@code values = ["Comedy"], operator = "AND"} will return the string {@code "\"Comedy\""}
+	 * 		</li>
+	 * </ul>
+	 *
+	 * @param values
+	 * @param operator
+	 * @return {@code String}
+	 */
 	private String processMultivaluedField(ArrayList<String> values, String operator) {
 		values.replaceAll(s -> {
 			if (!(s.startsWith("\"") || s.endsWith("\""))) {
@@ -71,6 +86,12 @@ public class ImdbSeriesApplication {
 		return values_field;
 	}
 
+	/**
+	 * Given a <b>map of query fields</b> it <b>process</b> a solr query string.
+	 *
+	 * @param fields
+	 * @return {@code String}
+	 */
 	@SuppressWarnings("unchecked")
 	private String buildQuery(Map<String, Object> fields) {
 		if (fields == null) {
@@ -80,8 +101,7 @@ public class ImdbSeriesApplication {
 		final String title = (String) fields.getOrDefault(QueryParam.TITLE.toString(), "*");
 		final String overview = (String) fields.getOrDefault(QueryParam.OVERVIEW.toString(), "*");
 		final Map<String, Object> genre = (Map<String, Object>) fields.getOrDefault(QueryParam.GENRE.toString(), null);
-		final Map<String, Object> actors = (Map<String, Object>) fields.getOrDefault(QueryParam.ACTORS.toString(),
-				null);
+		final Map<String, Object> actors = (Map<String, Object>) fields.getOrDefault(QueryParam.ACTORS.toString(), null);
 
 		String query = "";
 
@@ -108,6 +128,11 @@ public class ImdbSeriesApplication {
 		return query;
 	}
 
+	/**
+	 * Main api that <b>build</b> and <b>submit</b> a query solr.
+	 * @param payload
+	 * @return
+	 */
 	@CrossOrigin(origins = "*")
 	@PostMapping("/")
 	@SuppressWarnings("unchecked")
@@ -167,7 +192,7 @@ public class ImdbSeriesApplication {
 
 	/**
 	 * Read old query and relevant and non relevants docID and returns a new ranking
-	 * with rocchio algorithm
+	 * with rocchio algorithm.
 	 * 
 	 * @param payload json req
 	 * @return new documents ranking
@@ -182,16 +207,17 @@ public class ImdbSeriesApplication {
 
 		// Make new rf_score request to Flask 
 		RestTemplate restTemplate = new RestTemplate();
-		Map<String, Double> rfScore = restTemplate.postForObject("http://localhost:5000/rf_score", payload, HashMap.class);
+		Map<String, Double> rfScore = restTemplate.postForObject(FLASK_URL, payload, HashMap.class);
 
 		// Build new solr query with relevance feedback score
 		final SolrQuery query = new SolrQuery();
 		String query_string = buildQuery((Map<String, Object>) payload.get(QueryParam.FIELDS.toString()));
 
 		// Adding score boost for query string
-		query_string += " docID:(";
-		for (Entry<String, Double> entry : rfScore.entrySet())
+		query_string += " " + QueryParam.ID + ":(";
+		for (Entry<String, Double> entry : rfScore.entrySet()) {
 			query_string += entry.getKey() + "^" + (entry.getValue() * 10) + " ";
+		}
 		query_string += ")";
 
 		query.setQuery(query_string);
@@ -218,7 +244,7 @@ public class ImdbSeriesApplication {
 	}
 
 	/**
-	 * Read and update serie rating
+	 * Read and update series rating
 	 * 
 	 * @param payload json req
 	 * @return json res
@@ -233,8 +259,8 @@ public class ImdbSeriesApplication {
 		this.rating.putIfAbsent(docID, new Rating());
 		this.rating.get(docID).addRating(stars);
 		res.put("status", 200);
-		res.put("docID", docID);
-		res.put("avgStars", this.rating.get(docID).getAvgStars());
+		res.put(QueryParam.ID.toString(), docID);
+		res.put(QueryParam.STARS.toString(), this.rating.get(docID).getAvgStars());
 		return res;
 	}
 

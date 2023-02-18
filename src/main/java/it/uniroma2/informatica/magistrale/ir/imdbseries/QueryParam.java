@@ -11,7 +11,7 @@ public enum QueryParam {
     STARS("avgStars"),
     ID("docID"),
     FIELDS("fields"),
-    RELEVANTS ("relevants"),
+    RELEVANTS("relevants"),
     NON_RELEVANTS("non-relevants"),
     OP("op"),
     VALUES("values"),
