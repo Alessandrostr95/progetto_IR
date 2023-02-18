@@ -279,7 +279,7 @@ function sendLikes() {
             },
             body: JSON.stringify(req) // body data type must match "Content-Type" header
         }).then((response) => response.json())//response.json())
-            .then((json) => console.log(json))
+            .then((data) => buildMoviesList(data))
             .catch(err => {
                 this.alert("C'è stato un errore! Vedere la console per ulteriori informazioni");
                 console.log(err)

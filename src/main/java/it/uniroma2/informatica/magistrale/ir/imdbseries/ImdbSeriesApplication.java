@@ -10,11 +10,15 @@ import org.apache.solr.common.SolrDocumentList;
 import org.json.JSONException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.client.RestTemplate;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.*;
 
 @SpringBootApplication
@@ -171,16 +175,45 @@ public class ImdbSeriesApplication {
 	@CrossOrigin(origins = "*")
 	@PostMapping("/rf")
 	public List<SolrDocument> relevanceFeedback(@RequestBody Map<String, Object> payload) {
-		final Map<String, Object> fields = (Map<String, Object>) payload.getOrDefault(QueryParam.FIELDS.toString(),
-				null);
-		final List<Integer> relevants = (List<Integer>) payload.getOrDefault(QueryParam.RELEVANTS.toString(), null);
-		final List<Integer> nonRelevants = (List<Integer>) payload.getOrDefault(QueryParam.NON_RELEVANTS.toString(),
-				null);
 		System.out.println("New relevance feedback request:");
-		System.out.println(fields);
-		System.out.println(relevants);
-		System.out.println(nonRelevants);
-		return new LinkedList<>();
+		System.out.println(payload);
+		payload.put("k", 10); // By default, returns first k top score documents
+
+		// Make new rf_score request to Flask 
+		RestTemplate restTemplate = new RestTemplate();
+		Map<String, Double> rfScore = restTemplate.postForObject("http://localhost:5000/rf_score", payload, HashMap.class);
+
+		// Build new solr query with relevance feedback score
+		final SolrQuery query = new SolrQuery();
+		String query_string = buildQuery((Map<String, Object>) payload.get(QueryParam.FIELDS.toString()));
+
+		// Adding score boost for query string
+		query_string += " docID:(";
+		for (String docID : rfScore.keySet())
+			query_string += docID + "^" + (rfScore.get(docID) * 10) + " ";
+		query_string += ")";
+
+		query.setQuery(query_string);
+		query.setRows(Integer.MAX_VALUE);
+
+		final QueryResponse response;
+		try {
+			response = solrClient.query(SOLR_COLLECTION, query);
+		} catch (SolrServerException e) {
+			// TODO: handle SolrServerException
+			throw new RuntimeException(e);
+		} catch (IOException e) {
+			// TODO: handle IOException
+			throw new RuntimeException(e);
+		}
+
+		final SolrDocumentList documents = response.getResults();
+		final List<SolrDocument> result = new LinkedList<SolrDocument>();
+		for (SolrDocument document : documents) {
+			result.add(document);
+		}
+
+		return result;
 	}
 
 	/**
