@@ -20,6 +20,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
+import java.util.Map.Entry;
 
 @SpringBootApplication
 @RestController
@@ -136,8 +137,8 @@ public class ImdbSeriesApplication {
 			final boolean avgStars = (boolean) boost.getOrDefault(QueryParam.STARS.toString(), false);
 			if (avgStars) {
 				query_string += "docID:(";
-				for (Integer docID : this.rating.keySet())
-					query_string += docID + "^" + this.rating.get(docID).getAvgStars() + " ";
+				for (Entry<Integer, Rating> entry : this.rating.entrySet())
+					query_string += entry.getKey() + "^" + entry.getValue().getAvgStars() + " ";
 				query_string += ")";
 			}
 		}
@@ -189,8 +190,8 @@ public class ImdbSeriesApplication {
 
 		// Adding score boost for query string
 		query_string += " docID:(";
-		for (String docID : rfScore.keySet())
-			query_string += docID + "^" + (rfScore.get(docID) * 10) + " ";
+		for (Entry<String, Double> entry : rfScore.entrySet())
+			query_string += entry.getKey() + "^" + (entry.getValue() * 10) + " ";
 		query_string += ")";
 
 		query.setQuery(query_string);
