@@ -264,6 +264,17 @@ public class ImdbSeriesApplication {
 		return res;
 	}
 
+	/**
+	 * Get average stars of a serie keyed by docID
+	 * @param docID of the serie
+	 * @return <docID, avgStars> couple
+	 */
+	@CrossOrigin(origins = "*")
+	@GetMapping("/docID/{docID}/stars")
+	public Map<Integer, Double> getAvgStars(@PathVariable int docID){
+		return Collections.singletonMap(docID, this.rating.get(docID) != null ? this.rating.get(docID).getAvgStars() : 0);
+	}
+
 	private SolrClient getClient() {
 		return new HttpSolrClient.Builder(SOLR_URL)
 				.withConnectionTimeout(10000)

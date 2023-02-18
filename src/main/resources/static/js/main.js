@@ -110,7 +110,7 @@ function getValue(input) {
  * Build movies list by req movies 
  * @param req corresponding to req movies
  */
-function buildMoviesList(req) {
+async function buildMoviesList(req) {
     // Pulisci le vecchia richiesta
     document.querySelector("#table-breakpoint tbody").innerHTML = "";
     // Save req in session storage
@@ -166,23 +166,9 @@ function buildMoviesList(req) {
         blockStars.classList.add("block-stars");
         let ul = document.createElement("ul");
         ul.classList.add("w3l-ratings");
-        const stars = 4.24; // Qui ci andrà il numero di stelle dal nuovo field
-        for (let iLi = 0; iLi < 5; iLi++) {
-            const li = document.createElement("li");
-            const i = document.createElement("i");
-            i.classList.add("fa");
-            i["aria-hidden"] = "true";
-            if ((iLi + 0.5) == (Math.round(stars * 2) / 2))
-                i.classList.add("fa-star-half-o");
-            else if (iLi < Math.round(stars))
-                i.classList.add("fa-star");
-            else
-                i.classList.add("fa-star-o");
-            li.appendChild(i);
-            // Send star feedback
-            li.addEventListener("click", (e) => sendRating(serie.docID, (iLi + 1), e));
-            ul.appendChild(li);
-        }
+        // Fetch serie avg stars from server
+        const stars = (await (await fetch(`http://localhost:8088/docID/${serie.docID}/stars`)).json())[serie.docID];
+        buildStars(ul, serie.docID, stars);
         blockStars.appendChild(ul);
         td.appendChild(blockStars);
         tr.appendChild(td);
@@ -222,13 +208,38 @@ function buildMoviesList(req) {
 }
 
 /**
+ * Build stars HTML elements 
+ * @param {HTMLElement} ul parent element of stars
+ * @param {number} docID
+ * @param {number} stars number of stars
+ */
+function buildStars(ul, docID, stars) {
+    ul.innerHTML = "";
+    for (let iLi = 0; iLi < 5; iLi++) {
+        const li = document.createElement("li");
+        const i = document.createElement("i");
+        i.classList.add("fa");
+        i["aria-hidden"] = "true";
+        if ((iLi + 0.5) == (Math.round(stars * 2) / 2))
+            i.classList.add("fa-star-half-o");
+        else if (iLi < Math.round(stars))
+            i.classList.add("fa-star");
+        else
+            i.classList.add("fa-star-o");
+        li.appendChild(i);
+        // Send star feedback
+        li.addEventListener("click", (e) => sendRating(docID, (iLi + 1), e));
+        ul.appendChild(li);
+    }
+}
+
+/**
  * Send rating feedback
  * @param {number} docID 
  * @param {number} rating 
  * @param {HTMLElement} e n-th block stars element 
  */
 function sendRating(docID, rating, e) {
-    console.log(e);
     if (window.confirm(`Sei sicuro di voler valutare questa serie con ${rating} stelle?`)) {
         // Coloro la stella selezionata e le precedenti
         i = 0;
@@ -245,7 +256,8 @@ function sendRating(docID, rating, e) {
             .then((res) => {
                 if (res.status == 200) {
                     console.log(res);
-                    alert("Grazie per aver espresso la tua opinione!");
+                    alert("Grazie per aver espresso la tua opinione!");// const stars = (await (await fetch(`http://localhost:8088/docID/${docID}/stars`)).json())[docID];
+                    buildStars(e.target.parentElement.parentElement, docID, res["avgStars"]);
                 }
             })
             .catch(err => {
