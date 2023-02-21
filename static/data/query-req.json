@@ -1,0 +1,24 @@
+{
+    "fields": {
+        "Overview": "war",
+        "Series_Title": "game",
+        "Genre": {
+            "op": "AND",
+            "values": [
+                "Action",
+                "Adventure"
+            ]
+        },
+        "Actors": {
+            "op": "AND",
+            "values": [
+                "Emilia Clarke"
+            ]
+        },
+        "boost": {
+            "IMDB_Rating": true,
+            "No_of_Votes": false,
+            "avgStars": false
+        }
+    }
+}

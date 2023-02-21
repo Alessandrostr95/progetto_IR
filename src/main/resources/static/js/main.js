@@ -107,21 +107,21 @@ function getValue(input) {
 }
 
 /**
- * Build movies list by req movies 
- * @param req corresponding to req movies
+ * Build series list by server response series 
+ * @param res corresponding to res series
  */
-async function buildMoviesList(req) {
+async function buildMoviesList(res) {
     // Pulisci le vecchia richiesta
     document.querySelector("#table-breakpoint tbody").innerHTML = "";
-    // Save req in session storage
-    sessionStorage.setItem("result", JSON.stringify(req));
+    // Save res in session storage
+    sessionStorage.setItem("result", JSON.stringify(res));
     // update #search results
-    document.querySelector(".w3ls-news-result span").textContent = req.length;
+    document.querySelector(".w3ls-news-result span").textContent = res.length;
     // Remove hidden div
     document.querySelector("#home").classList.remove("hide");
     const tbody = document.querySelector("#table-breakpoint tbody");
     let no = 1;
-    for (const serie of req) {
+    for (const serie of res) {
         // No
         const tr = document.createElement("tr");
         let td = document.createElement("td");
