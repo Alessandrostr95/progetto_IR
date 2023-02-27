@@ -173,7 +173,9 @@ public class ImdbSeriesApplication {
 			}
 		}
 		query.setQuery(query_string);
-		query.setRows(Integer.MAX_VALUE);
+		// Limitiamo le righe per il testing
+		query.setRows(20);
+		// query.setRows(Integer.MAX_VALUE);
 
 		final QueryResponse response;
 		try {
@@ -226,7 +228,9 @@ public class ImdbSeriesApplication {
 		query_string += ")";
 
 		query.setQuery(query_string);
-		query.setRows(Integer.MAX_VALUE);
+		// Limitiamo le righe per il testing
+		query.setRows(20);
+		// query.setRows(Integer.MAX_VALUE);
 
 		final QueryResponse response;
 		try {
