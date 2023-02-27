@@ -1,0 +1,467 @@
+[
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMjI5MjE1MzUzN15BMl5BanBnXkFtZTgwODEyNjQxMTE@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "The Adventures of Tintin",
+    "Runtime_of_Series": "(1991–1992)",
+    "Runtime_of_Episodes": "30 min",
+    "Genre": [
+      "Animation",
+      "Action",
+      "Adventure"
+    ],
+    "IMDB_Rating": 8.3,
+    "Overview": "The adventures of the young reporter, his faithful dog and friends as they travel around the world on adventures.",
+    "No_of_Votes": 16720,
+    "docID": 836,
+    "Actors": [
+      "Colin O'Meara",
+      "Thierry Wermuth",
+      "Christian Pelissier",
+      "Henri Labussière"
+    ],
+    "id": "468f3931-4947-4fd8-90d7-850e8e72ab9a",
+    "_version_": 1758095608768364500
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BZWJhYjFmZDEtNTVlYy00NGExLWJhZWItNTAxODY5YTc3MDFmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY98_CR1,0,67,98_AL_.jpg",
+    "Series_Title": "Doctor Who",
+    "Runtime_of_Series": "(2005– )",
+    "Certificate": "U",
+    "Runtime_of_Episodes": "45 min",
+    "Genre": [
+      "Adventure",
+      "Drama",
+      "Family"
+    ],
+    "IMDB_Rating": 8.6,
+    "Overview": "The further adventures in time and space of the alien adventurer known as the Doctor and their companions from planet Earth.",
+    "No_of_Votes": 200288,
+    "docID": 71,
+    "Actors": [
+      "Jodie Whittaker",
+      "Peter Capaldi",
+      "Pearl Mackie",
+      "Matt Smith"
+    ],
+    "id": "98577385-3177-4bb7-881a-19822ba94c2e",
+    "_version_": 1758095608647778300
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BZGY2ZGFkYjctOWY2Ni00MGQ5LWE4OTItNjJhNzA5MWFmMjk1XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "Adventure Time",
+    "Runtime_of_Series": "(2010–2018)",
+    "Runtime_of_Episodes": "11 min",
+    "Genre": [
+      "Animation",
+      "Short",
+      "Action"
+    ],
+    "IMDB_Rating": 8.6,
+    "Overview": "A 12-year-old boy and his best friend, wise 28-year-old dog with magical powers, go on a series of surreal adventures with each other in a remote future.",
+    "No_of_Votes": 77029,
+    "docID": 209,
+    "Actors": [
+      "John DiMaggio",
+      "Jeremy Shada",
+      "Tom Kenny",
+      "Hynden Walch"
+    ],
+    "id": "9ed4820c-b3d6-4be8-9a66-fc9e6325cfa7",
+    "_version_": 1758095608681332700
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMjA0Nzg1MjI3NF5BMl5BanBnXkFtZTcwODE1NzgyMQ@@._V1_UY98_CR2,0,67,98_AL_.jpg",
+    "Series_Title": "The Adventures of Pete & Pete",
+    "Runtime_of_Series": "(1992–1996)",
+    "Runtime_of_Episodes": "30 min",
+    "Genre": [
+      "Comedy",
+      "Drama"
+    ],
+    "IMDB_Rating": 8.3,
+    "Overview": "This delightfully quirky show looks at the lives and adventures of two red-headed brothers with the same name.",
+    "No_of_Votes": 8850,
+    "docID": 1353,
+    "Actors": [
+      "Michael C. Maronna",
+      "Danny Tamberelli",
+      "Judy Grafe",
+      "Alison Fanelli"
+    ],
+    "id": "068ebecd-d905-42e7-a31f-0e84ab26c4b8",
+    "_version_": 1758095608822890500
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BZjAxYTcxMDUtZTRmMi00NTk3LThkZTItNGNlZTQ3NWRhMjY5XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_UY98_CR1,0,67,98_AL_.jpg",
+    "Series_Title": "Wonder Woman",
+    "Runtime_of_Series": "(1975–1979)",
+    "Runtime_of_Episodes": "60 min",
+    "Genre": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "IMDB_Rating": 7.1,
+    "Overview": "The adventures of the greatest of the female superheroes.",
+    "No_of_Votes": 7146,
+    "docID": 1577,
+    "Actors": [
+      "Lynda Carter",
+      "Lyle Waggoner",
+      "Tom Kratochvil",
+      "Richard Eastham"
+    ],
+    "id": "64f09ff1-c3ab-4095-91a2-109c142b80ba",
+    "_version_": 1758095608839667700
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BYmZmOTM3NjctZDg3Zi00NTYzLWIzY2UtYWEyOWM2NThhYzg5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY98_CR5,0,67,98_AL_.jpg",
+    "Series_Title": "Supergirl",
+    "Runtime_of_Series": "(2015–2021)",
+    "Certificate": "12+",
+    "Runtime_of_Episodes": "43 min",
+    "Genre": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "IMDB_Rating": 6.3,
+    "Overview": "The adventures of Superman's cousin in her own superhero career.",
+    "No_of_Votes": 111301,
+    "docID": 138,
+    "Actors": [
+      "Melissa Benoist",
+      "Chyler Leigh",
+      "David Harewood",
+      "Mehcad Brooks"
+    ],
+    "id": "2d13afcb-ca3b-4d9e-90c4-abed4d947b21",
+    "_version_": 1758095608663507000
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMWRlNTRkM2ItNDkwMC00ZjNmLWI2ZDQtNWI0MTllMGU5OTVjXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_UY98_CR3,0,67,98_AL_.jpg",
+    "Series_Title": "The Adventures of Jimmy Neutron, Boy Genius",
+    "Runtime_of_Series": "(2002–2006)",
+    "Runtime_of_Episodes": "24 min",
+    "Genre": [
+      "Animation",
+      "Adventure",
+      "Comedy"
+    ],
+    "IMDB_Rating": 6.7,
+    "Overview": "A young boy, who happens to be a genius, lives in a small town with his family and friends and often gets into crazy adventures with them involving the things he invents.",
+    "No_of_Votes": 17918,
+    "docID": 793,
+    "Actors": [
+      "Debi Derryberry",
+      "Jeffrey Garcia",
+      "Rob Paulsen",
+      "Carolyn Lawrence"
+    ],
+    "id": "ca2c4dac-db50-4d52-a1e2-ad57329785ad",
+    "_version_": 1758095608764170200
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BYjFkMTlkYWUtZWFhNy00M2FmLThiOTYtYTRiYjVlZWYxNmJkXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "The Simpsons",
+    "Runtime_of_Series": "(1989– )",
+    "Certificate": "U",
+    "Runtime_of_Episodes": "22 min",
+    "Genre": [
+      "Animation",
+      "Comedy"
+    ],
+    "IMDB_Rating": 8.7,
+    "Overview": "The satiric adventures of a working-class family in the misfit city of Springfield.",
+    "No_of_Votes": 366039,
+    "docID": 21,
+    "Actors": [
+      "Dan Castellaneta",
+      "Nancy Cartwright",
+      "Harry Shearer",
+      "Julie Kavner"
+    ],
+    "id": "33c700f3-d119-4bae-a9cc-768defd3a8c8",
+    "_version_": 1758095608627855400
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BY2JkYjE4MWYtMGJlZC00OWVhLWJlMmUtNGQzYjM0ZDUxNGI2XkEyXkFqcGdeQXVyMjM5NDQzNTk@._V1_UY98_CR2,0,67,98_AL_.jpg",
+    "Series_Title": "The New Batman Adventures",
+    "Runtime_of_Series": "(1997–1999)",
+    "Runtime_of_Episodes": "30 min",
+    "Genre": [
+      "Animation",
+      "Action",
+      "Adventure"
+    ],
+    "IMDB_Rating": 8.5,
+    "Overview": "The further and darker adventures of Batman with a new Robin, a closer association with Batgirl and the previous Robin now as Nightwing.",
+    "No_of_Votes": 14563,
+    "docID": 928,
+    "Actors": [
+      "Kevin Conroy",
+      "Tara Strong",
+      "Mathew Valencia",
+      "Efrem Zimbalist Jr."
+    ],
+    "id": "37566615-1a8c-4ca2-8623-52e3a48d97f1",
+    "_version_": 1758095608779899000
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BOWRmYWJmMzktZTk3MC00NWI3LWJlMWItOWU1MTI3ODUxNDYwXkEyXkFqcGdeQXVyNzgzMzE2MTk@._V1_UY98_CR15,0,67,98_AL_.jpg",
+    "Series_Title": "The Shannara Chronicles",
+    "Runtime_of_Series": "(2016–2017)",
+    "Certificate": "18",
+    "Runtime_of_Episodes": "42 min",
+    "Genre": [
+      "Adventure",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "IMDB_Rating": 7.2,
+    "Overview": "Series of adventures, war, and evil that occur throughout the history of the Four Lands.",
+    "No_of_Votes": 54373,
+    "docID": 284,
+    "Actors": [
+      "Austin Butler",
+      "Ivana Baquero",
+      "Manu Bennett",
+      "Aaron Jakubenko"
+    ],
+    "id": "ab898aec-911c-43b7-b4e2-60369dec0782",
+    "_version_": 1758095608693915600
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTYyNTQwNzk0OV5BMl5BanBnXkFtZTgwMDAyMDI2MDI@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "Taboo",
+    "Runtime_of_Series": "(2017– )",
+    "Runtime_of_Episodes": "59 min",
+    "Genre": [
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "IMDB_Rating": 8.4,
+    "Overview": "Adventurer James Keziah Delaney returns to London during the War of 1812 to rebuild his late father's shipping empire. However, both the government and his biggest competitor want his inheritance at any cost - even murder.",
+    "No_of_Votes": 115751,
+    "docID": 129,
+    "Actors": [
+      "Tom Hardy",
+      "David Hayman",
+      "Jonathan Pryce",
+      "Oona Chaplin"
+    ],
+    "id": "d21cfdb9-20db-4fbd-a471-28c5c1bf3d19",
+    "_version_": 1758095608661409800
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BZTBjYjM3ZjItZTI1MS00ODZhLWFhZDgtODgxMmMzN2JlOTExXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY98_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "Merlin",
+    "Runtime_of_Series": "(2008–2012)",
+    "Certificate": "16",
+    "Runtime_of_Episodes": "45 min",
+    "Genre": [
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "IMDB_Rating": 7.9,
+    "Overview": "These are the brand new adventures of Merlin, the legendary sorcerer as a young man, when he was just a servant to young Prince Arthur on the royal court of Camelot, who has soon become his best friend, and turned Arthur into a great king and a legend.",
+    "No_of_Votes": 73807,
+    "docID": 219,
+    "Actors": [
+      "John Hurt",
+      "Colin Morgan",
+      "Bradley James",
+      "Richard Wilson"
+    ],
+    "id": "511168df-890f-4cad-9c19-183ff0603582",
+    "_version_": 1758095608683430000
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "One Piece: Wan pîsu",
+    "Runtime_of_Series": "(1999– )",
+    "Certificate": "7",
+    "Runtime_of_Episodes": "24 min",
+    "Genre": [
+      "Animation",
+      "Action",
+      "Adventure"
+    ],
+    "IMDB_Rating": 8.7,
+    "Overview": "Follows the adventures of Monkey D. Luffy and his pirate crew in order to find the greatest treasure ever left by the legendary Pirate, Gold Roger. The famous mystery treasure named \"One Piece\".",
+    "No_of_Votes": 70275,
+    "docID": 228,
+    "Actors": [
+      "Mayumi Tanaka",
+      "Tony Beck",
+      "Laurent Vernin",
+      "Akemi Okamura"
+    ],
+    "id": "d02c7057-e95f-4723-96fa-dd033d8877bc",
+    "_version_": 1758095608684478500
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMGMyOThiMGUtYmFmZi00YWM0LWJiM2QtZGMwM2Q2ODE4MzhhXkEyXkFqcGdeQXVyMjc2Nzg5OTQ@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "Dragon Ball Z: Doragon bôru zetto",
+    "Runtime_of_Series": "(1989–1996)",
+    "Runtime_of_Episodes": "24 min",
+    "Genre": [
+      "Animation",
+      "Action",
+      "Adventure"
+    ],
+    "IMDB_Rating": 8.7,
+    "Overview": "The adventures of Earth's martial arts defender Son Goku continue with a new family and the revelation of his alien origin. Now Goku and his allies must defend the planet from an onslaught of new extraterrestrial enemies.",
+    "No_of_Votes": 68721,
+    "docID": 232,
+    "Actors": [
+      "Jôji Yanami",
+      "Kyle Hebert",
+      "Masako Nozawa",
+      "Christopher Sabat"
+    ],
+    "id": "17007009-4543-4f5c-9c28-29df343a9952",
+    "_version_": 1758095608685527000
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BNGY1Y2RlZmItZTQ1Zi00MzUyLThiYzEtZjA2OTIzMTM1YTkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "Paranormal",
+    "Runtime_of_Series": "(2020– )",
+    "Certificate": "15+",
+    "Runtime_of_Episodes": "45 min",
+    "Genre": [
+      "Drama",
+      "Fantasy",
+      "Horror"
+    ],
+    "IMDB_Rating": 8.1,
+    "Overview": "Set in the 1960s, the series, packed with mystery and suspense, depicts the adventures of PARANORMAL leading character Dr. Refaat Ismail, a single hematologist who finds himself faced with a series of supernatural events.",
+    "No_of_Votes": 67621,
+    "docID": 237,
+    "Actors": [
+      "Ahmed Amin",
+      "Reem Abd El Kader",
+      "Samma Ibrahim",
+      "Razane Jammal"
+    ],
+    "id": "a5f51374-6d7b-44d2-959f-e893722f9d70",
+    "_version_": 1758095608685527000
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTcwMDU5NzMzOV5BMl5BanBnXkFtZTgwNzk5NTE0MzE@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "Marco Polo",
+    "Runtime_of_Series": "(2014–2016)",
+    "Certificate": "18",
+    "Runtime_of_Episodes": "60 min",
+    "Genre": [
+      "Adventure",
+      "Drama",
+      "History"
+    ],
+    "IMDB_Rating": 8,
+    "Overview": "In a world replete with greed, betrayal, sexual intrigue and rivalry, \"Marco Polo\" is based on the famed explorer's adventures in Kublai Khan's court in 13th century Mongolia.",
+    "No_of_Votes": 64780,
+    "docID": 250,
+    "Actors": [
+      "Lorenzo Richelmy",
+      "Benedict Wong",
+      "Joan Chen",
+      "Remy Hii"
+    ],
+    "id": "9e4b91c5-8c19-4e3d-8781-7a90c6fc0fba",
+    "_version_": 1758095608687624200
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BYjkyOWIyZGYtYzU3ZS00NWM2LThjZGEtMDZjZjg2MTI2NzBhXkEyXkFqcGdeQXVyNjI4OTg2Njg@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "The Grand Tour",
+    "Runtime_of_Series": "(2016– )",
+    "Certificate": "16",
+    "Runtime_of_Episodes": "60 min",
+    "Genre": [
+      "Comedy",
+      "Talk-Show"
+    ],
+    "IMDB_Rating": 8.7,
+    "Overview": "Follow Jeremy, Richard, and James, as they embark on an adventure across the globe, driving new and exciting automobiles from manufacturers all over the world.",
+    "No_of_Votes": 63922,
+    "docID": 254,
+    "Actors": [
+      "Jeremy Clarkson",
+      "James May",
+      "Richard Hammond",
+      "Abbie Eaton"
+    ],
+    "id": "e6d9862e-1d51-4ba7-a41a-cb4d19ccee82",
+    "_version_": 1758095608688672800
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BODZjOGMxMGUtYTY3YS00NjcxLWFkY2EtYzc3NDVkZjk0YWY2XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY98_CR2,0,67,98_AL_.jpg",
+    "Series_Title": "Black Books",
+    "Runtime_of_Series": "(2000–2004)",
+    "Runtime_of_Episodes": "25 min",
+    "Genre": [
+      "Comedy"
+    ],
+    "IMDB_Rating": 8.5,
+    "Overview": "Bernard Black runs a book shop, though his customer service skills leave something to be desired. He hires Manny as an employee. Fran runs the shop next door. Between the three of them many adventures ensue.",
+    "No_of_Votes": 54447,
+    "docID": 282,
+    "Actors": [
+      "Dylan Moran",
+      "Bill Bailey",
+      "Tamsin Greig",
+      "Paul Beech"
+    ],
+    "id": "cd20d8d1-2a45-4eb0-85b0-512a16d96103",
+    "_version_": 1758095608692867000
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BNzRlNGUzMmEtYTg0Ni00N2U2LTg4YWEtNDdlNmMwYjBlZDQ0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+    "Series_Title": "Lupin",
+    "Runtime_of_Series": "(2021– )",
+    "Certificate": "16",
+    "Runtime_of_Episodes": "231 min",
+    "Genre": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "IMDB_Rating": 7.6,
+    "Overview": "Inspired by the adventures of Arsène Lupin, gentleman thief Assane Diop sets out to avenge his father for an injustice inflicted by a wealthy family.",
+    "No_of_Votes": 45183,
+    "docID": 349,
+    "Actors": [
+      "Omar Sy",
+      "Vincent Londez",
+      "Ludivine Sagnier",
+      "Hervé Pierre"
+    ],
+    "id": "6229dd60-fa9c-4358-854b-12d46b585fb7",
+    "_version_": 1758095608706498600
+  },
+  {
+    "Poster_Link": "https://m.media-amazon.com/images/M/MV5BN2IxMzk2YTEtOGFhYS00MTE3LWI4N2QtYWFlODIzZjM1MjNlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY98_CR1,0,67,98_AL_.jpg",
+    "Series_Title": "The Cleveland Show",
+    "Runtime_of_Series": "(2009–2013)",
+    "Runtime_of_Episodes": "22 min",
+    "Genre": [
+      "Animation",
+      "Adventure",
+      "Comedy"
+    ],
+    "IMDB_Rating": 5.5,
+    "Overview": "The adventures of the Family Guy (1999) neighbor and former deli owner, Cleveland Brown.",
+    "No_of_Votes": 38575,
+    "docID": 410,
+    "Actors": [
+      "Mike Henry",
+      "Sanaa Lathan",
+      "Kevin Michael Richardson",
+      "Jason Sudeikis"
+    ],
+    "id": "56bcbf20-c36a-4498-b141-dd519093d749",
+    "_version_": 1758095608713838600
+  }
+]

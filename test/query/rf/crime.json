@@ -1,0 +1,472 @@
+[
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BNzc2MzJmM2ItMjgzYy00MjgxLTljYjctZjJhYzM1ODFhMzU0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "American Crime Story",
+        "Runtime_of_Series": "(2016– )",
+        "Certificate": "18",
+        "Runtime_of_Episodes": "42 min",
+        "Genre": [
+            "Biography",
+            "Crime",
+            "Drama"
+        ],
+        "IMDB_Rating": 8.4,
+        "Overview": "An anthology series centered around America's most notorious crimes and criminals.",
+        "No_of_Votes": 80144,
+        "docID": 202,
+        "Actors": [
+            "Sarah Paulson",
+            "Annaleigh Ashford",
+            "Sterling K. Brown",
+            "Kenneth Choi"
+        ],
+        "id": "f97fb86d-6b0a-4930-809b-02cfc1fa4477",
+        "_version_": 1758095608681332700
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BODg1MTYyZjYtMzJhZi00ZjI3LWI3MTItZTFhZDNhZmYwMjYwXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Delhi Crime",
+        "Runtime_of_Series": "(2019– )",
+        "Certificate": "16+",
+        "Runtime_of_Episodes": "50 min",
+        "Genre": [
+            "Crime",
+            "Drama"
+        ],
+        "IMDB_Rating": 8.5,
+        "Overview": "Based on the Nirbhaya case, Delhi Crime follows the Delhi Police investigation into the finding of the men who perpetrated this crime.",
+        "No_of_Votes": 13422,
+        "docID": 984,
+        "Actors": [
+            "Shefali Shah",
+            "Rajesh Tailang",
+            "Rasika Dugal",
+            "Anurag Arora"
+        ],
+        "id": "575429d4-e320-4098-8af6-7c7a941b0c47",
+        "_version_": 1758095608786190300
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTUxODIwOTgzN15BMl5BanBnXkFtZTgwNDI4ODI1MTE@._V1_UY98_CR1,0,67,98_AL_.jpg",
+        "Series_Title": "Crossing Lines",
+        "Runtime_of_Series": "(2013–2015)",
+        "Runtime_of_Episodes": "43 min",
+        "Genre": [
+            "Action",
+            "Crime",
+            "Drama"
+        ],
+        "IMDB_Rating": 7.3,
+        "Overview": "A special crime unit investigates serialized crimes that cross over European borders, to hunt down criminals and bring them to justice.",
+        "No_of_Votes": 12322,
+        "docID": 1049,
+        "Actors": [
+            "Tom Wlaschiha",
+            "Donald Sutherland",
+            "Lara Rossi",
+            "William Fichtner"
+        ],
+        "id": "dc285cad-e62a-42f9-af2c-d88f3d4cdb45",
+        "_version_": 1758095608795627500
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BNzgxOTc4ODctNDNhZC00M2UzLTgyYzgtM2Q2OTk3NmQ5NTljXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "The Outsider",
+        "Runtime_of_Series": "(2020– )",
+        "Certificate": "15+",
+        "Runtime_of_Episodes": "60 min",
+        "Genre": [
+            "Crime",
+            "Drama",
+            "Fantasy"
+        ],
+        "IMDB_Rating": 7.8,
+        "Overview": "Investigators are confounded over an unspeakable crime that's been committed.",
+        "No_of_Votes": 62162,
+        "docID": 259,
+        "Actors": [
+            "Ben Mendelsohn",
+            "Bill Camp",
+            "Jeremy Bobb",
+            "Mare Winningham"
+        ],
+        "id": "6fbc1588-ce33-48c8-a215-e02d348b0e42",
+        "_version_": 1758095608689721300
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BODIwYmE0MGQtYmNhMS00ZjM4LWJkMzAtNjg5YzI4MzZjMjg3XkEyXkFqcGdeQXVyNjU2ODM5MjU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "The Sinner",
+        "Runtime_of_Series": "(2017– )",
+        "Certificate": "18",
+        "Runtime_of_Episodes": "45 min",
+        "Genre": [
+            "Crime",
+            "Drama",
+            "Mystery"
+        ],
+        "IMDB_Rating": 7.9,
+        "Overview": "Anthology series that examines how and why ordinary people commit brutal crimes.",
+        "No_of_Votes": 87656,
+        "docID": 176,
+        "Actors": [
+            "Bill Pullman",
+            "Dohn Norwood",
+            "Adam LeFevre",
+            "Jessica Biel"
+        ],
+        "id": "5956cedc-6130-4836-8b96-261ca601ba4e",
+        "_version_": 1758095608677138400
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BOWQ1OGI0ZTItOTNkYi00NWFhLWE3ZWYtODVmMjkzMmM1NDYwXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY98_CR1,0,67,98_AL_.jpg",
+        "Series_Title": "Alfred Hitchcock Presents",
+        "Runtime_of_Series": "(1955–1962)",
+        "Runtime_of_Episodes": "25 min",
+        "Genre": [
+            "Comedy",
+            "Crime",
+            "Drama"
+        ],
+        "IMDB_Rating": 8.5,
+        "Overview": "Series of unrelated short stories covering elements of crime, horror, drama, and comedy about people of different backgrounds committing murders, suicides, thefts, and other sorts of crime caused by certain motivations, perceived or not.",
+        "No_of_Votes": 14841,
+        "docID": 916,
+        "Actors": [
+            "Alfred Hitchcock",
+            "Harry Tyler",
+            "John Williams",
+            "Patricia Hitchcock"
+        ],
+        "id": "8c9a1cd7-33fd-452b-b596-496514ba91d6",
+        "_version_": 1758095608778850300
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BZDU1NzA5YzUtNTdmNy00NTVjLWFhNzEtYWI1NmNkNTA1ZDBhXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY98_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Person of Interest",
+        "Runtime_of_Series": "(2011–2016)",
+        "Certificate": "16",
+        "Runtime_of_Episodes": "43 min",
+        "Genre": [
+            "Action",
+            "Crime",
+            "Drama"
+        ],
+        "IMDB_Rating": 8.4,
+        "Overview": "An ex-CIA agent and a wealthy programmer save lives via a surveillance AI that sends them the identities of civilians involved in impending crimes. However, the details of the crimes, including the civilians' roles, are left a mystery.",
+        "No_of_Votes": 163362,
+        "docID": 87,
+        "Actors": [
+            "Jim Caviezel",
+            "Taraji P. Henson",
+            "Kevin Chapman",
+            "Michael Emerson"
+        ],
+        "id": "cfc64594-5550-4967-b24d-498dd12cd84c",
+        "_version_": 1758095608651972600
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTkxMzY5NTY0Ml5BMl5BanBnXkFtZTcwMDcwOTM5MQ@@._V1_UY98_CR1,0,67,98_AL_.jpg",
+        "Series_Title": "Numb3rs",
+        "Runtime_of_Series": "(2005–2010)",
+        "Runtime_of_Episodes": "43 min",
+        "Genre": [
+            "Crime",
+            "Drama",
+            "Mystery"
+        ],
+        "IMDB_Rating": 6.9,
+        "Overview": "Working for the F.B.I., a mathematician uses equations to help solve various crimes.",
+        "No_of_Votes": 39464,
+        "docID": 400,
+        "Actors": [
+            "Rob Morrow",
+            "David Krumholtz",
+            "Judd Hirsch",
+            "Alimi Ballard"
+        ],
+        "id": "f224ecfd-2506-4271-a01e-3bd4c5e328ef",
+        "_version_": 1758095608712790000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BOTU3ZTI5ZGEtYjhiMy00ODU4LTgyM2UtNDhlYjBhMjc4MjIwXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "CSI: Miami",
+        "Runtime_of_Series": "(2002–2012)",
+        "Runtime_of_Episodes": "43 min",
+        "Genre": [
+            "Action",
+            "Crime",
+            "Drama"
+        ],
+        "IMDB_Rating": 6.4,
+        "Overview": "The cases of the Miami-Dade, Florida police department's Crime Scene Investigations unit.",
+        "No_of_Votes": 53375,
+        "docID": 290,
+        "Actors": [
+            "David Caruso",
+            "Emily Procter",
+            "Adam Rodriguez",
+            "Rex Linn"
+        ],
+        "id": "d2cc49e2-9a6b-4ece-a36e-a40d4665bba0",
+        "_version_": 1758095608693915600
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Batman: The Animated Series",
+        "Runtime_of_Series": "(1992–1995)",
+        "Runtime_of_Episodes": "23 min",
+        "Genre": [
+            "Animation",
+            "Action",
+            "Adventure"
+        ],
+        "IMDB_Rating": 9,
+        "Overview": "The Dark Knight battles crime in Gotham City with occasional help from Robin and Batgirl.",
+        "No_of_Votes": 87651,
+        "docID": 177,
+        "Actors": [
+            "Kevin Conroy",
+            "Loren Lester",
+            "Efrem Zimbalist Jr.",
+            "Bob Hastings"
+        ],
+        "id": "96720b64-b768-41d5-adab-fb4ab8d204c4",
+        "_version_": 1758095608677138400
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMWY3NTljMjEtYzRiMi00NWM2LTkzNjItZTVmZjE0MTdjMjJhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTQ4NTc5OTU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Sherlock",
+        "Runtime_of_Series": "(2010–2017)",
+        "Certificate": "UA",
+        "Runtime_of_Episodes": "88 min",
+        "Genre": [
+            "Crime",
+            "Drama",
+            "Mystery"
+        ],
+        "IMDB_Rating": 9.1,
+        "Overview": "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.",
+        "No_of_Votes": 808717,
+        "docID": 5,
+        "Actors": [
+            "Benedict Cumberbatch",
+            "Martin Freeman",
+            "Una Stubbs",
+            "Rupert Graves"
+        ],
+        "id": "e91d2e2e-73cd-4b67-9bf5-3b3f88a80947",
+        "_version_": 1758095608618418200
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BODcwOTg2MDE3NF5BMl5BanBnXkFtZTgwNTUyNTY1NjM@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Daredevil",
+        "Runtime_of_Series": "(2015–2018)",
+        "Certificate": "18+",
+        "Runtime_of_Episodes": "54 min",
+        "Genre": [
+            "Action",
+            "Crime",
+            "Drama"
+        ],
+        "IMDB_Rating": 8.6,
+        "Overview": "A blind lawyer by day, vigilante by night. Matt Murdock fights the crime of New York as Daredevil.",
+        "No_of_Votes": 363031,
+        "docID": 23,
+        "Actors": [
+            "Charlie Cox",
+            "Vincent D'Onofrio",
+            "Deborah Ann Woll",
+            "Elden Henson"
+        ],
+        "id": "f7ca10cf-fff9-4ccf-a011-5c7a0f2361e8",
+        "_version_": 1758095608628904000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMDIzNzYwNTctZWY4Mi00YjQ2LWI5YWYtMzdmNDgwMGI4Yzk1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY98_CR5,0,67,98_AL_.jpg",
+        "Series_Title": "The Flash",
+        "Runtime_of_Series": "(2014– )",
+        "Certificate": "12+",
+        "Runtime_of_Episodes": "43 min",
+        "Genre": [
+            "Action",
+            "Adventure",
+            "Drama"
+        ],
+        "IMDB_Rating": 7.7,
+        "Overview": "After being struck by lightning, Barry Allen wakes up from his coma to discover he's been given the power of super speed, becoming the next Flash, fighting crime in Central City.",
+        "No_of_Votes": 305593,
+        "docID": 32,
+        "Actors": [
+            "Grant Gustin",
+            "Candice Patton",
+            "Danielle Panabaker",
+            "Carlos Valdes"
+        ],
+        "id": "d87993b9-5d89-4763-843c-510d3369d94e",
+        "_version_": 1758095608633098200
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BYjYyM2FmMmMtZDgyZi00NGU3LWI3NzktODllZDY0YzQyNzgyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Orange Is the New Black",
+        "Runtime_of_Series": "(2013–2019)",
+        "Certificate": "18+",
+        "Runtime_of_Episodes": "59 min",
+        "Genre": [
+            "Comedy",
+            "Crime",
+            "Drama"
+        ],
+        "IMDB_Rating": 8.1,
+        "Overview": "Convicted of a decade old crime of transporting drug money to an ex-girlfriend, normally law-abiding Piper Chapman is sentenced to a year and a half behind bars to face the reality of how life-changing prison can really be.",
+        "No_of_Votes": 279138,
+        "docID": 41,
+        "Actors": [
+            "Taylor Schilling",
+            "Danielle Brooks",
+            "Taryn Manning",
+            "Emma Myles"
+        ],
+        "id": "ddedf4d2-2016-4334-af5e-7825501d27c2",
+        "_version_": 1758095608637292500
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BNGE2ZmFkZTYtNjRiOS00ZjE3LThjOWMtZTViZjRmNDFjNTQwXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Criminal Minds",
+        "Runtime_of_Series": "(2005–2020)",
+        "Runtime_of_Episodes": "42 min",
+        "Genre": [
+            "Crime",
+            "Drama",
+            "Mystery"
+        ],
+        "IMDB_Rating": 8.1,
+        "Overview": "The cases of the F.B.I. Behavioral Analysis Unit (B.A.U.), an elite group of profilers who analyze the nation's most dangerous serial killers and individual heinous crimes in an effort to anticipate their next moves before they strike again.",
+        "No_of_Votes": 161622,
+        "docID": 88,
+        "Actors": [
+            "Matthew Gray Gubler",
+            "Kirsten Vangsness",
+            "A.J. Cook",
+            "Joe Mantegna"
+        ],
+        "id": "2a23fe7b-ccd6-4eca-aa69-bc41d997d5e6",
+        "_version_": 1758095608651972600
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BNDJhMjUzMDYtNzc4MS00Nzk2LTkyMGQtN2M5NTczYTZmYmY5XkEyXkFqcGdeQXVyMzU3MTc5OTE@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Deadwood",
+        "Runtime_of_Series": "(2004–2006)",
+        "Certificate": "18",
+        "Runtime_of_Episodes": "55 min",
+        "Genre": [
+            "Crime",
+            "Drama",
+            "History"
+        ],
+        "IMDB_Rating": 8.6,
+        "Overview": "A show set in the late 1800s, revolving around the characters of Deadwood, South Dakota; a town of deep corruption and crime.",
+        "No_of_Votes": 94932,
+        "docID": 164,
+        "Actors": [
+            "Timothy Olyphant",
+            "Ian McShane",
+            "Molly Parker",
+            "Brad Dourif"
+        ],
+        "id": "e3bc0007-6b6a-4d42-bd98-a7f83156a597",
+        "_version_": 1758095608668749800
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTg4Mjc1NjE4Ml5BMl5BanBnXkFtZTgwMjk2NjA1NjM@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Making a Murderer",
+        "Runtime_of_Series": "(2015–2018)",
+        "Certificate": "16",
+        "Runtime_of_Episodes": "60 min",
+        "Genre": [
+            "Documentary",
+            "Crime"
+        ],
+        "IMDB_Rating": 8.6,
+        "Overview": "Filmed over a 10-year period, Steven Avery, a DNA exoneree who, while in the midst of exposing corruption in local law enforcement, finds himself the prime suspect in a grisly new crime.",
+        "No_of_Votes": 86831,
+        "docID": 181,
+        "Actors": [
+            "Dolores Avery",
+            "Steven Avery",
+            "Laura Nirider",
+            "Ken Kratz"
+        ],
+        "id": "0f42ea04-0049-4ae6-8727-3b14e5e718a6",
+        "_version_": 1758095608678187000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BYzRkOWRmNGUtYzM0Zi00ZGRkLThhMjktNmI4NDYwZDVmODBkXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Psych",
+        "Runtime_of_Series": "(2006–2014)",
+        "Certificate": "13",
+        "Runtime_of_Episodes": "44 min",
+        "Genre": [
+            "Comedy",
+            "Crime",
+            "Mystery"
+        ],
+        "IMDB_Rating": 8.3,
+        "Overview": "A novice sleuth is hired by the Police after he cons them into thinking he has psychic powers which help solve crimes. With the assistance of his reluctant best friend, the duo take on a series of complicated cases.",
+        "No_of_Votes": 85395,
+        "docID": 186,
+        "Actors": [
+            "James Roday Rodriguez",
+            "Dulé Hill",
+            "Timothy Omundson",
+            "Corbin Bernsen"
+        ],
+        "id": "31096ba1-382e-4fed-a3e7-c7931c2f4bb4",
+        "_version_": 1758095608678187000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BNWNlNjcwNGItOWRkNi00MzI0LTg3OGMtYzdjZDA4YmU4M2U1XkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Law & Order: Special Victims Unit",
+        "Runtime_of_Series": "(1999– )",
+        "Runtime_of_Episodes": "60 min",
+        "Genre": [
+            "Crime",
+            "Drama",
+            "Mystery"
+        ],
+        "IMDB_Rating": 8,
+        "Overview": "This series follows the Special Victims Unit, a specially trained squad of detectives in the N.Y.P.D., who investigate sexually related crimes.",
+        "No_of_Votes": 81738,
+        "docID": 196,
+        "Actors": [
+            "Mariska Hargitay",
+            "Christopher Meloni",
+            "Ice-T",
+            "Dann Florek"
+        ],
+        "id": "66228699-16bf-4c53-bacc-18013e50c313",
+        "_version_": 1758095608680284200
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMzQzNDZiODktZDFjOS00YWU2LWJlOTAtZGUzMzg1ZmRiODAxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY98_CR4,0,67,98_AL_.jpg",
+        "Series_Title": "CSI: NY",
+        "Runtime_of_Series": "(2004–2013)",
+        "Runtime_of_Episodes": "43 min",
+        "Genre": [
+            "Action",
+            "Crime",
+            "Drama"
+        ],
+        "IMDB_Rating": 6.9,
+        "Overview": "CSI head Detective Mac Taylor and his team solve crimes using forensic science in New York City.",
+        "No_of_Votes": 43806,
+        "docID": 358,
+        "Actors": [
+            "Gary Sinise",
+            "Carmine Giovinazzo",
+            "Hill Harper",
+            "Eddie Cahill"
+        ],
+        "id": "95377f00-a496-4259-be45-b8b5d9d61f7e",
+        "_version_": 1758095608707547100
+    }
+]
