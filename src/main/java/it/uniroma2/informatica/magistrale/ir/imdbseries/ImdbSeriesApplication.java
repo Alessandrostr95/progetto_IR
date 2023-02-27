@@ -98,15 +98,18 @@ public class ImdbSeriesApplication {
 			return "*:*";
 		}
 
-		final String title = (String) fields.getOrDefault(QueryParam.TITLE.toString(), "*");
-		final String overview = (String) fields.getOrDefault(QueryParam.OVERVIEW.toString(), "*");
+		String title = (String) fields.getOrDefault(QueryParam.TITLE.toString(), "*");
+		String overview = (String) fields.getOrDefault(QueryParam.OVERVIEW.toString(), "*");
 		final Map<String, Object> genre = (Map<String, Object>) fields.getOrDefault(QueryParam.GENRE.toString(), null);
 		final Map<String, Object> actors = (Map<String, Object>) fields.getOrDefault(QueryParam.ACTORS.toString(), null);
 
 		String query = "";
 
-		query += QueryParam.TITLE + ":(" + title + ")";
-		query += " " + QueryParam.OVERVIEW + ":(" + overview + ")";
+		title = title.trim();
+		overview = overview.trim();
+
+		query += QueryParam.TITLE + ":" + (title.equals("*") || title.isEmpty() ? title : "(" + title + ")");
+		query += " " + QueryParam.OVERVIEW + ":" + (overview.equals("*") || overview.isEmpty() ? overview : "(" + overview + ")");
 
 		if (genre != null) {
 			ArrayList<String> genre_list = (ArrayList<String>) genre.get(QueryParam.VALUES.toString());
