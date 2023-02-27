@@ -291,9 +291,9 @@ function sendLikes() {
             },
             body: JSON.stringify(req) // body data type must match "Content-Type" header
         }).then((response) => response.json())//response.json())
-            .then((data) => buildMoviesList(data))
+            .then((data) => {console.log(JSON.stringify(data)); buildMoviesList(data)})
             .catch(err => {
-                this.alert("C'è stato un errore! Vedere la console per ulteriori informazioni");
+                alert("C'è stato un errore! Vedere la console per ulteriori informazioni");
                 console.log(err)
             });
         alert("Grazie per aver espresso la tua preferenza!");

@@ -108,8 +108,10 @@ public class ImdbSeriesApplication {
 		title = title.trim();
 		overview = overview.trim();
 
-		query += QueryParam.TITLE + ":" + (title.equals("*") || title.isEmpty() ? title : "(" + title + ")");
-		query += " " + QueryParam.OVERVIEW + ":" + (overview.equals("*") || overview.isEmpty() ? overview : "(" + overview + ")");
+		if(!title.isEmpty() && !title.equals("*"))
+			query += QueryParam.TITLE + ":(" + title + ")";
+		if(!overview.isEmpty() && !overview.equals("*"))
+			query += " " + QueryParam.OVERVIEW + ":(" + overview + ")";
 
 		if (genre != null) {
 			ArrayList<String> genre_list = (ArrayList<String>) genre.get(QueryParam.VALUES.toString());
