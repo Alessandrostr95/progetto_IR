@@ -105,8 +105,8 @@ public class ImdbSeriesApplication {
 
 		String query = "";
 
-		query += QueryParam.TITLE + ":" + (title == "*" ? title : "\"" + title + "\"");
-		query += " " + QueryParam.OVERVIEW + ":" + (overview == "*" ? overview : "\"" + overview + "\"");
+		query += QueryParam.TITLE + ":(" + title + ")";
+		query += " " + QueryParam.OVERVIEW + ":(" + overview + ")";
 
 		if (genre != null) {
 			ArrayList<String> genre_list = (ArrayList<String>) genre.get(QueryParam.VALUES.toString());
