@@ -1,0 +1,459 @@
+[
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMzhmNTg1NWYtNTUzNy00NWI0LTk1ZmYtODA1YTE0NGNkYWZkXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY98_CR2,0,67,98_AL_.jpg",
+        "Series_Title": "Star Wars: Clone Wars",
+        "Runtime_of_Series": "(2003–2005)",
+        "Runtime_of_Episodes": "133 min",
+        "Genre": [
+            "Animation",
+            "Action",
+            "Adventure"
+        ],
+        "IMDB_Rating": 7.8,
+        "Overview": "The events and battles of the Galactic Republic's last major war are recounted.",
+        "No_of_Votes": 22865,
+        "docID": 632,
+        "Actors": [
+            "Mat Lucas",
+            "James Arnold Taylor",
+            "André Sogliuzzo",
+            "Grey Griffin"
+        ],
+        "id": "fbfb7305-fc31-41fb-a9de-f29ad06074d3",
+        "_version_": 1758095608743198700
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BYjJhNjUzN2ItNmFjMC00ZjM3LWExMmItZjkyMjI1NWU3Y2FmXkEyXkFqcGdeQXVyMjExMjk0ODk@._V1_UY98_CR3,0,67,98_AL_.jpg",
+        "Series_Title": "Foyle's War",
+        "Runtime_of_Series": "(2002–2015)",
+        "Runtime_of_Episodes": "90 min",
+        "Genre": [
+            "Crime",
+            "Drama",
+            "Mystery"
+        ],
+        "IMDB_Rating": 8.4,
+        "Overview": "As WWII rages, DCS Foyle fights his own war on the home-front; investigating crime on the south coast of England. Later series, see the retired detective working as an MI5 agent in the aftermath of the war.",
+        "No_of_Votes": 12719,
+        "docID": 1024,
+        "Actors": [
+            "Michael Kitchen",
+            "Honeysuckle Weeks",
+            "Anthony Howell",
+            "Ellie Haddington"
+        ],
+        "id": "697da48c-21b8-434b-a04c-6cf67d868043",
+        "_version_": 1758095608792481800
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTQ0OTc1NTU1NV5BMl5BanBnXkFtZTcwNDk1NDYxMQ@@._V1_UY98_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Blackadder Goes Forth",
+        "Runtime_of_Series": "(1989)",
+        "Runtime_of_Episodes": "175 min",
+        "Genre": [
+            "Comedy",
+            "War"
+        ],
+        "IMDB_Rating": 8.8,
+        "Overview": "Stuck in the middle of World War I, Captain Edmund Blackadder does his best to escape the banality of the war.",
+        "No_of_Votes": 48590,
+        "docID": 318,
+        "Actors": [
+            "Rowan Atkinson",
+            "Tony Robinson",
+            "Stephen Fry",
+            "Hugh Laurie"
+        ],
+        "id": "6fdb71bd-20e0-48a1-87e6-a9473c88b51f",
+        "_version_": 1758095608698110000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMzkxYjhiNmEtMjA4Mi00OWU0LWIwYTgtZGFhYWE5N2E1OTk0XkEyXkFqcGdeQXVyNzMwOTY2NTI@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Hogan's Heroes",
+        "Runtime_of_Series": "(1965–1971)",
+        "Runtime_of_Episodes": "25 min",
+        "Genre": [
+            "Comedy",
+            "War"
+        ],
+        "IMDB_Rating": 7.9,
+        "Overview": "The inmates of a German World War II prisoner of war camp conduct an espionage and sabotage campaign right under the noses of their warders.",
+        "No_of_Votes": 8683,
+        "docID": 1379,
+        "Actors": [
+            "Bob Crane",
+            "Werner Klemperer",
+            "John Banner",
+            "Richard Dawson"
+        ],
+        "id": "327d3386-324c-433f-a87e-7d0ee93a8b24",
+        "_version_": 1758095608824987600
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BODg5NDU5NjM1NV5BMl5BanBnXkFtZTgwOTE0NjY1NjM@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Counterpart",
+        "Runtime_of_Series": "(2017–2019)",
+        "Runtime_of_Episodes": "60 min",
+        "Genre": [
+            "Drama",
+            "Sci-Fi",
+            "Thriller"
+        ],
+        "IMDB_Rating": 8.1,
+        "Overview": "A hapless UN employee discovers that the agency he works for is hiding a gateway to a parallel dimension that's in a cold war with our own, and where his other self is a top spy. The war slowly heats up thanks to spies from both sides.",
+        "No_of_Votes": 22034,
+        "docID": 659,
+        "Actors": [
+            "J.K. Simmons",
+            "Olivia Williams",
+            "Harry Lloyd",
+            "Nazanin Boniadi"
+        ],
+        "id": "22e4d8f3-e267-408d-82af-85dc901aecfa",
+        "_version_": 1758095608746344400
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BNDUxODg4MzE5NV5BMl5BanBnXkFtZTYwNDA0OTc4._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Beast Wars: Transformers",
+        "Runtime_of_Series": "(1996–1999)",
+        "Runtime_of_Episodes": "30 min",
+        "Genre": [
+            "Animation",
+            "Action",
+            "Sci-Fi"
+        ],
+        "IMDB_Rating": 8.1,
+        "Overview": "The Transformers' war continues in an older time, through a new generation. On pliocenic Earth, the heroic Maximals and the evil Predacons battle for survival against each other and against a violent planet.",
+        "No_of_Votes": 7374,
+        "docID": 1549,
+        "Actors": [
+            "Scott McNeil",
+            "Garry Chalk",
+            "Ian James Corlett",
+            "Richard Newman"
+        ],
+        "id": "70f8091f-f9f4-4b1b-ac72-6f4db525a875",
+        "_version_": 1758095608837570600
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BOWRmYWJmMzktZTk3MC00NWI3LWJlMWItOWU1MTI3ODUxNDYwXkEyXkFqcGdeQXVyNzgzMzE2MTk@._V1_UY98_CR15,0,67,98_AL_.jpg",
+        "Series_Title": "The Shannara Chronicles",
+        "Runtime_of_Series": "(2016–2017)",
+        "Certificate": "18",
+        "Runtime_of_Episodes": "42 min",
+        "Genre": [
+            "Adventure",
+            "Fantasy",
+            "Sci-Fi"
+        ],
+        "IMDB_Rating": 7.2,
+        "Overview": "Series of adventures, war, and evil that occur throughout the history of the Four Lands.",
+        "No_of_Votes": 54373,
+        "docID": 284,
+        "Actors": [
+            "Austin Butler",
+            "Ivana Baquero",
+            "Manu Bennett",
+            "Aaron Jakubenko"
+        ],
+        "id": "ab898aec-911c-43b7-b4e2-60369dec0782",
+        "_version_": 1758095608693915600
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTUyMjE2MDIxOV5BMl5BanBnXkFtZTcwMzE2MDE5Nw@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Copper",
+        "Runtime_of_Series": "(2012–2013)",
+        "Runtime_of_Episodes": "42 min",
+        "Genre": [
+            "Action",
+            "Drama"
+        ],
+        "IMDB_Rating": 7.5,
+        "Overview": "In the 1860s, an Irish-American Civil War veteran joins the New York City police force.",
+        "No_of_Votes": 10144,
+        "docID": 1226,
+        "Actors": [
+            "Tom Weston-Jones",
+            "Kyle Schmid",
+            "Anastasia Griffith",
+            "Ato Essandoh"
+        ],
+        "id": "aaec7fb2-8a78-4b0c-ba42-51e2c95df187",
+        "_version_": 1758095608811356200
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMWNhMmIzY2ItZjNlNC00NjY4LWE2NmItOWE3Zjg3Mzg0ZTAzXkEyXkFqcGdeQXVyNTg4MDc2NTQ@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "The War at Home",
+        "Runtime_of_Series": "(2005–2007)",
+        "Runtime_of_Episodes": "30 min",
+        "Genre": [
+            "Comedy",
+            "Romance"
+        ],
+        "IMDB_Rating": 7.5,
+        "Overview": "Parents struggle to raise their teens.",
+        "No_of_Votes": 8620,
+        "docID": 1388,
+        "Actors": [
+            "Michael Rapaport",
+            "Anita Barone",
+            "Kaylee DeFer",
+            "Kyle Sullivan"
+        ],
+        "id": "8f8212e3-ba69-463c-b18d-b74dea6de292",
+        "_version_": 1758095608824987600
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BZWFlNzRmOTItZjY1Ni00ZjZkLTk5MDgtOGFhOTYzNWFhYzhmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Star Wars: The Clone Wars",
+        "Runtime_of_Series": "(2008–2020)",
+        "Certificate": "PG",
+        "Runtime_of_Episodes": "23 min",
+        "Genre": [
+            "Animation",
+            "Action",
+            "Adventure"
+        ],
+        "IMDB_Rating": 8.3,
+        "Overview": "Jedi Knights lead the Grand Army of the Republic against the droid army of the Separatists.",
+        "No_of_Votes": 63880,
+        "docID": 255,
+        "Actors": [
+            "Tom Kane",
+            "Dee Bradley Baker",
+            "Matt Lanter",
+            "James Arnold Taylor"
+        ],
+        "id": "1acee261-5c72-48ae-89f6-bd440a4a576b",
+        "_version_": 1758095608688672800
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BZGZkYTdiMzQtMWE5My00NTg2LTlhNTctOTMxNzdhYTE4NzRlXkEyXkFqcGdeQXVyODAzNzAwOTU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Mahabharat",
+        "Runtime_of_Series": "(2013–2014)",
+        "Certificate": "12+",
+        "Runtime_of_Episodes": "20 min",
+        "Genre": [
+            "Drama",
+            "War"
+        ],
+        "IMDB_Rating": 8.8,
+        "Overview": "The mother of all wars, the mother of all rivalries, the cauldron of emotions, insecurities, jealousies and power play - Mahabharat. Rivetting and a master lesson for the entire mankind.",
+        "No_of_Votes": 6015,
+        "docID": 1800,
+        "Actors": [
+            "Saurabh Jain",
+            "Shaheer Sheikh",
+            "Pooja Sharma",
+            "Arav Chowdharry"
+        ],
+        "id": "54646a28-ae9b-4152-a573-f5aaa0a6332c",
+        "_version_": 1758095608857493500
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMmQwZWYzNWEtYTMyYy00YzBjLTlkNmQtMmI4ZTdhNDRmZDFkXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Warrior",
+        "Runtime_of_Series": "(2019– )",
+        "Certificate": "18",
+        "Runtime_of_Episodes": "60 min",
+        "Genre": [
+            "Action",
+            "Crime",
+            "Drama"
+        ],
+        "IMDB_Rating": 8.3,
+        "Overview": "During the Tong Wars in the late 1800s, Ah Sahm, a martial arts prodigy from China, immigrates to San Francisco and becomes a hatchet man for the most powerful tong in Chinatown.",
+        "No_of_Votes": 17293,
+        "docID": 814,
+        "Actors": [
+            "Andrew Koji",
+            "Olivia Cheng",
+            "Jason Tobin",
+            "Dianne Doan"
+        ],
+        "id": "2847d1f1-e587-4849-9b81-f80876883261",
+        "_version_": 1758095608766267400
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BN2Q3ZWM0YzgtMGU0Mi00OWM0LWIwNzctNmQ4NTUyYTk0ZWY2XkEyXkFqcGdeQXVyMzYyMzU2OA@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Babylon 5",
+        "Runtime_of_Series": "(1993–1998)",
+        "Runtime_of_Episodes": "45 min",
+        "Genre": [
+            "Action",
+            "Adventure",
+            "Drama"
+        ],
+        "IMDB_Rating": 8.3,
+        "Overview": "In the mid 23rd century, the Earth Alliance space station Babylon 5, located in neutral territory, is a major focal point for political intrigue, racial tensions and various wars over the course of five years.",
+        "No_of_Votes": 28095,
+        "docID": 546,
+        "Actors": [
+            "Mira Furlan",
+            "Richard Biggs",
+            "Stephen Furst",
+            "Andreas Katsulas"
+        ],
+        "id": "b2ead0bc-6264-4305-84f8-65601cba08f6",
+        "_version_": 1758095608733761500
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BZjVmYmE5NmYtYWFmNC00NjY3LWI4NjEtNTI3NTBlYTExNjNkXkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_UY98_CR1,0,67,98_AL_.jpg",
+        "Series_Title": "Dad's Army",
+        "Runtime_of_Series": "(1968–1977)",
+        "Runtime_of_Episodes": "30 min",
+        "Genre": [
+            "Comedy",
+            "War"
+        ],
+        "IMDB_Rating": 8.1,
+        "Overview": "A ragtag group of Home Guard volunteers prepare for an imminent German invasion during World War II.",
+        "No_of_Votes": 5651,
+        "docID": 1875,
+        "Actors": [
+            "Arthur Lowe",
+            "John Le Mesurier",
+            "Clive Dunn",
+            "John Laurie"
+        ],
+        "id": "04bc8083-cd85-4781-88bb-829843c9e1e5",
+        "_version_": 1758095608861687800
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMjIzNTEzMDY3OF5BMl5BanBnXkFtZTcwMzI5NDI5OA@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "The Americans",
+        "Runtime_of_Series": "(2013–2018)",
+        "Certificate": "15+",
+        "Runtime_of_Episodes": "44 min",
+        "Genre": [
+            "Crime",
+            "Drama",
+            "Mystery"
+        ],
+        "IMDB_Rating": 8.4,
+        "Overview": "At the height of the Cold War two Russian agents pose as your average American couple, complete with family.",
+        "No_of_Votes": 84480,
+        "docID": 189,
+        "Actors": [
+            "Keri Russell",
+            "Matthew Rhys",
+            "Keidrich Sellati",
+            "Holly Taylor"
+        ],
+        "id": "9c11f046-2fe7-4df1-a738-87e9736745e2",
+        "_version_": 1758095608679235600
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BOTA2MDUxMTgtY2RhMC00NWViLWIwMmEtYzYzYTc1YTM4NDVjXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Strike",
+        "Runtime_of_Series": "(2017– )",
+        "Certificate": "15+",
+        "Runtime_of_Episodes": "60 min",
+        "Genre": [
+            "Crime",
+            "Drama",
+            "Mystery"
+        ],
+        "IMDB_Rating": 7.9,
+        "Overview": "War veteran turned private detective Cormoran Strike solves brutal murders with the help of his trusted assistant Robin Ellacott.",
+        "No_of_Votes": 10543,
+        "docID": 1185,
+        "Actors": [
+            "Tom Burke",
+            "Holliday Grainger",
+            "Kerr Logan",
+            "Killian Scott"
+        ],
+        "id": "74eba23c-74cf-4eea-8ee7-7d709e8bd842",
+        "_version_": 1758095608808210400
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTk2MTQzMDgxNl5BMl5BanBnXkFtZTcwNDI2OTI1Mg@@._V1_UY98_CR1,0,67,98_AL_.jpg",
+        "Series_Title": "The Waltons",
+        "Runtime_of_Series": "(1972–1981)",
+        "Runtime_of_Episodes": "60 min",
+        "Genre": [
+            "Drama",
+            "Family",
+            "Romance"
+        ],
+        "IMDB_Rating": 7.6,
+        "Overview": "The life and trials of a 1930s and 1940s Virginia mountain family through financial depression and World War II.",
+        "No_of_Votes": 5741,
+        "docID": 1855,
+        "Actors": [
+            "Jon Walmsley",
+            "Mary Beth McDonough",
+            "Eric Scott",
+            "Kami Cotler"
+        ],
+        "id": "979c8c75-bd36-47cb-bec0-226c2af226b2",
+        "_version_": 1758095608860639200
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMjQwODkwMjgwMV5BMl5BanBnXkFtZTgwNTA0NjY3NTE@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "The Brink",
+        "Runtime_of_Series": "(2015)",
+        "Runtime_of_Episodes": "30 min",
+        "Genre": [
+            "Comedy"
+        ],
+        "IMDB_Rating": 7.8,
+        "Overview": "Top U.S. government and military scramble to prevent World War 3 from happening amidst the chaos of a geopolitical crisis.",
+        "No_of_Votes": 13273,
+        "docID": 994,
+        "Actors": [
+            "Jack Black",
+            "Tim Robbins",
+            "Pablo Schreiber",
+            "Aasif Mandvi"
+        ],
+        "id": "b5e010b2-4343-4b02-a17e-d88e097a3c1a",
+        "_version_": 1758095608787239000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BZTFjNmM0YTItNzg3NC00NWNmLThkMGItODdiZWUyNmIxM2E0XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Project Blue Book",
+        "Runtime_of_Series": "(2019–2020)",
+        "Runtime_of_Episodes": "45 min",
+        "Genre": [
+            "Drama",
+            "Mystery",
+            "Sci-Fi"
+        ],
+        "IMDB_Rating": 7.6,
+        "Overview": "A tough US Air Force officer and a skeptical scientist investigate UFO and alien conspiracies as Cold War paranoia spreads.",
+        "No_of_Votes": 10090,
+        "docID": 1236,
+        "Actors": [
+            "Aidan Gillen",
+            "Michael Malarkey",
+            "Laura Mennell",
+            "Ksenia Solo"
+        ],
+        "id": "91d6249c-89fb-4c55-989b-2eff08f0ed98",
+        "_version_": 1758095608814502000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BNDk2ZjY0NWEtMDg3MC00MzA1LWFjZmUtNWVlN2M0YTQ4ZjI5XkEyXkFqcGdeQXVyNzQ0MjE2MDg@._V1_UY98_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Smoke",
+        "Runtime_of_Series": "(2018–2019)",
+        "Certificate": "Not Rated",
+        "Runtime_of_Episodes": "40 min",
+        "Genre": [
+            "Thriller"
+        ],
+        "IMDB_Rating": 8.5,
+        "Overview": "Set in Goa, Smoke explores the dark web of drugs, mafia, and power. With the cartels at war, who will survive?",
+        "No_of_Votes": 6538,
+        "docID": 1683,
+        "Actors": [
+            "Jim Sarbh",
+            "Kalki Koechlin",
+            "Mandira Bedi",
+            "Gulshan Devaiah"
+        ],
+        "id": "8a7f10e0-af0e-4ce3-9a07-73cbc98c96e0",
+        "_version_": 1758095608848056300
+    }
+]

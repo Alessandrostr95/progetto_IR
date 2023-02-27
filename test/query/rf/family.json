@@ -1,0 +1,447 @@
+[
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTUwNTM4NzIzNl5BMl5BanBnXkFtZTcwMjQ5MTkzMQ@@._V1_UY98_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "The Royle Family",
+        "Runtime_of_Series": "(1998–2012)",
+        "Runtime_of_Episodes": "45 min",
+        "Genre": [
+            "Comedy"
+        ],
+        "IMDB_Rating": 8.1,
+        "Overview": "A British sitcom about a family going through everyday life in the Royle family house.",
+        "No_of_Votes": 6544,
+        "docID": 1681,
+        "Actors": [
+            "Ricky Tomlinson",
+            "Sue Johnston",
+            "Caroline Aherne",
+            "Craig Cash"
+        ],
+        "id": "357fd2af-3ea3-4503-a5fd-da147fa0a10d",
+        "_version_": 1758095608848056300
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTI3OTM0MzY3M15BMl5BanBnXkFtZTcwNzY3NzQyMw@@._V1_UY98_CR1,0,67,98_AL_.jpg",
+        "Series_Title": "Leave It to Beaver",
+        "Runtime_of_Series": "(1957–1963)",
+        "Runtime_of_Episodes": "30 min",
+        "Genre": [
+            "Comedy",
+            "Family"
+        ],
+        "IMDB_Rating": 7.5,
+        "Overview": "The misadventures of a suburban boy, family and friends.",
+        "No_of_Votes": 6775,
+        "docID": 1639,
+        "Actors": [
+            "Jerry Mathers",
+            "Hugh Beaumont",
+            "Barbara Billingsley",
+            "Tony Dow"
+        ],
+        "id": "8fd4d96f-f0d9-4732-a4a8-42c486346465",
+        "_version_": 1758095608844910600
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BYTg2ZGFiZGUtYmFjOC00Y2RiLTliNTItN2FjZGI1NjA1ZDNmXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Life in Pieces",
+        "Runtime_of_Series": "(2015–2019)",
+        "Runtime_of_Episodes": "22 min",
+        "Genre": [
+            "Comedy"
+        ],
+        "IMDB_Rating": 8,
+        "Overview": "A family comedy told through the separate stories of different family members.",
+        "No_of_Votes": 12842,
+        "docID": 1016,
+        "Actors": [
+            "Colin Hanks",
+            "Betsy Brandt",
+            "Thomas Sadoski",
+            "Zoe Lister-Jones"
+        ],
+        "id": "edaf72e4-9b4d-4d07-ad70-96b60f1bda8c",
+        "_version_": 1758095608789336000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTg3MTI3NDQ4Nl5BMl5BanBnXkFtZTcwNzQ2MTQ0Nw@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Even Stevens",
+        "Runtime_of_Series": "(2000–2003)",
+        "Runtime_of_Episodes": "30 min",
+        "Genre": [
+            "Comedy",
+            "Family"
+        ],
+        "IMDB_Rating": 7.6,
+        "Overview": "The Stevens family live in Sacramento, California, where the two younger children in the family, Ren and Louis, who have opposing personalities, often clash.",
+        "No_of_Votes": 13625,
+        "docID": 974,
+        "Actors": [
+            "Shia LaBeouf",
+            "Christy Carlson Romano",
+            "A.J. Trauth",
+            "Nick Spano"
+        ],
+        "id": "36c50ebb-b56e-427e-a676-e838bdf21321",
+        "_version_": 1758095608785141800
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTA5MmM4ZmYtMWE4My00OGUzLWE0ZDQtNGE5Mjc3ZWM0Y2Q1XkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_UY98_CR1,0,67,98_AL_.jpg",
+        "Series_Title": "The Addams Family",
+        "Runtime_of_Series": "(1964–1966)",
+        "Runtime_of_Episodes": "30 min",
+        "Genre": [
+            "Comedy",
+            "Family",
+            "Horror"
+        ],
+        "IMDB_Rating": 8,
+        "Overview": "The misadventures of a blissfully macabre but extremely loving family.",
+        "No_of_Votes": 14552,
+        "docID": 930,
+        "Actors": [
+            "John Astin",
+            "Carolyn Jones",
+            "Jackie Coogan",
+            "Ted Cassidy"
+        ],
+        "id": "4f466897-c8d6-476c-9caf-8f99381bd6c8",
+        "_version_": 1758095608779899000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BZGYzMjA3MjQtZjkwMi00N2RmLTgyNTktYjk4OTAwNzUyNmVjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTEwMTkwOTI@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Wizards of Waverly Place",
+        "Runtime_of_Series": "(2007–2012)",
+        "Certificate": "All",
+        "Runtime_of_Episodes": "22 min",
+        "Genre": [
+            "Adventure",
+            "Comedy",
+            "Drama"
+        ],
+        "IMDB_Rating": 6.9,
+        "Overview": "The Russo family may be an ordinary family with an average restaurant, but behind close doors, all three children must compete to be the next family wizard.",
+        "No_of_Votes": 29638,
+        "docID": 522,
+        "Actors": [
+            "Selena Gomez",
+            "David Henrie",
+            "Jake T. Austin",
+            "Jennifer Stone"
+        ],
+        "id": "eb908296-1c9b-45f3-bb90-e08b3215bf6e",
+        "_version_": 1758095608728518700
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BOGQ0ODZiMDctYTU0My00OTVjLWFlOTAtNGIyOTliNDZlZmVlXkEyXkFqcGdeQXVyNjE4NTk3Nzg@._V1_UY98_CR2,0,67,98_AL_.jpg",
+        "Series_Title": "The Jetsons",
+        "Runtime_of_Series": "(1962–1963)",
+        "Runtime_of_Episodes": "25 min",
+        "Genre": [
+            "Animation",
+            "Comedy",
+            "Family"
+        ],
+        "IMDB_Rating": 7,
+        "Overview": "The misadventures of a futuristic family.",
+        "No_of_Votes": 18747,
+        "docID": 773,
+        "Actors": [
+            "George O'Hanlon",
+            "Janet Waldo",
+            "Mel Blanc",
+            "Penny Singleton"
+        ],
+        "id": "0c931908-682d-4bba-9c05-bd41c7c64118",
+        "_version_": 1758095608762073000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BYjI3ZTg3M2MtZDc5ZC00N2JmLWFmMWUtZDc4ZGQzNTI3Y2ViXkEyXkFqcGdeQXVyNzM3MjY2MjU@._V1_UY98_CR3,0,67,98_AL_.jpg",
+        "Series_Title": "Duck Dynasty",
+        "Runtime_of_Series": "(2012–2017)",
+        "Runtime_of_Episodes": "60 min",
+        "Genre": [
+            "Comedy",
+            "Reality-TV"
+        ],
+        "IMDB_Rating": 6.3,
+        "Overview": "Follows a wealthy Louisiana family known for their successful duck-hunting business.",
+        "No_of_Votes": 10239,
+        "docID": 1210,
+        "Actors": [
+            "Jase Robertson",
+            "Si Robertson",
+            "Willie Robertson",
+            "Korie Robertson"
+        ],
+        "id": "3e04deba-7e2c-419c-8624-9009cfdfebc3",
+        "_version_": 1758095608810307600
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMjEyOTExMDA5OF5BMl5BanBnXkFtZTcwNjM2NjQ3Mg@@._V1_UY98_CR1,0,67,98_AL_.jpg",
+        "Series_Title": "All in the Family",
+        "Runtime_of_Series": "(1971–1979)",
+        "Runtime_of_Episodes": "30 min",
+        "Genre": [
+            "Comedy",
+            "Drama"
+        ],
+        "IMDB_Rating": 8.3,
+        "Overview": "A working class man constantly squabbles with his family over the important issues of the day.",
+        "No_of_Votes": 14015,
+        "docID": 953,
+        "Actors": [
+            "Carroll O'Connor",
+            "Jean Stapleton",
+            "Rob Reiner",
+            "Sally Struthers"
+        ],
+        "id": "8eaa652d-9f89-4abd-8d9b-7d885982117b",
+        "_version_": 1758095608783044600
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BNzRhNWIxYTEtYjc2NS00YWFlLWFhOGEtMDZiMWM1M2RkNDkyXkEyXkFqcGdeQXVyNjc0MjkzNjc@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Modern Family",
+        "Runtime_of_Series": "(2009–2020)",
+        "Certificate": "12+",
+        "Runtime_of_Episodes": "22 min",
+        "Genre": [
+            "Comedy",
+            "Drama",
+            "Romance"
+        ],
+        "IMDB_Rating": 8.4,
+        "Overview": "Three different but related families face trials and tribulations in their own uniquely comedic ways.",
+        "No_of_Votes": 356381,
+        "docID": 25,
+        "Actors": [
+            "Ed O'Neill",
+            "Sofía Vergara",
+            "Julie Bowen",
+            "Ty Burrell"
+        ],
+        "id": "cabb21fc-1daf-487d-8d02-a22f77d062a2",
+        "_version_": 1758095608629952500
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMjY0NTE1ODU3OV5BMl5BanBnXkFtZTgwOTI4NDQwMDI@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Blue Bloods",
+        "Runtime_of_Series": "(2010– )",
+        "Runtime_of_Episodes": "43 min",
+        "Genre": [
+            "Crime",
+            "Drama",
+            "Mystery"
+        ],
+        "IMDB_Rating": 7.6,
+        "Overview": "Revolves around a family of New York cops.",
+        "No_of_Votes": 32512,
+        "docID": 479,
+        "Actors": [
+            "Donnie Wahlberg",
+            "Bridget Moynahan",
+            "Will Estes",
+            "Len Cariou"
+        ],
+        "id": "cb8c8b19-1c79-4850-9246-0d2c93737241",
+        "_version_": 1758095608722227200
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BODQ1ZjU5Y2UtZWQ4Mi00MmUyLWExOTUtMDA0Y2RhNGJhYzg3XkEyXkFqcGdeQXVyNzA4NzQyMjk@._V1_UY98_CR1,0,67,98_AL_.jpg",
+        "Series_Title": "Lucky Louie",
+        "Runtime_of_Series": "(2006–2007)",
+        "Runtime_of_Episodes": "30 min",
+        "Genre": [
+            "Comedy"
+        ],
+        "IMDB_Rating": 7.9,
+        "Overview": "A working class family and their oddball friends.",
+        "No_of_Votes": 9898,
+        "docID": 1254,
+        "Actors": [
+            "Louis C.K.",
+            "Pamela Adlon",
+            "Mike Hagerty",
+            "Laura Kightlinger"
+        ],
+        "id": "4a29d44f-9842-4773-b35b-4162d2e39b34",
+        "_version_": 1758095608815550500
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BNGQxOTNiMGEtZjRhZi00ODFhLWFkODctNGYwZWI0YzJiNDhkXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "American Housewife",
+        "Runtime_of_Series": "(2016– )",
+        "Runtime_of_Episodes": "30 min",
+        "Genre": [
+            "Comedy"
+        ],
+        "IMDB_Rating": 7.3,
+        "Overview": "A family comedy narrated by Katie, a strong-willed mother, raising her flawed family in a wealthy town filled with perfect wives and their perfect offspring.",
+        "No_of_Votes": 7814,
+        "docID": 1488,
+        "Actors": [
+            "Katy Mixon",
+            "Diedrich Bader",
+            "Daniel DiMaggio",
+            "Ali Wong"
+        ],
+        "id": "c440c73b-da82-472d-8cc8-fdc7189e51a6",
+        "_version_": 1758095608833376300
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMjAwMjA3Mzg2N15BMl5BanBnXkFtZTgwMDY2Nzg3MjE@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Parenthood",
+        "Runtime_of_Series": "(2010–2015)",
+        "Runtime_of_Episodes": "60 min",
+        "Genre": [
+            "Comedy",
+            "Drama"
+        ],
+        "IMDB_Rating": 8.2,
+        "Overview": "The lives and tragedies of the Braverman family tree.",
+        "No_of_Votes": 30845,
+        "docID": 506,
+        "Actors": [
+            "Peter Krause",
+            "Lauren Graham",
+            "Dax Shepard",
+            "Monica Potter"
+        ],
+        "id": "c2d7ef89-9484-48bb-82e7-936fd0f0ce66",
+        "_version_": 1758095608725373000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTI0MzIxMTk1OF5BMl5BanBnXkFtZTcwODg4OTQ1MQ@@._V1_UY98_CR1,0,67,98_AL_.jpg",
+        "Series_Title": "House of Payne",
+        "Runtime_of_Series": "(2006– )",
+        "Runtime_of_Episodes": "30 min",
+        "Genre": [
+            "Comedy",
+            "Drama",
+            "Family"
+        ],
+        "IMDB_Rating": 3.5,
+        "Overview": "A multi-generational family lives together under one roof.",
+        "No_of_Votes": 5781,
+        "docID": 1848,
+        "Actors": [
+            "LaVan Davis",
+            "Cassi Davis",
+            "Allen Payne",
+            "Lance Gross"
+        ],
+        "id": "117781e9-35b3-425e-b3e3-608d8fd65e0b",
+        "_version_": 1758095608859590700
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BNTFlYTE2YTItZmQ1NS00ZWQ5LWI3OGUtYTQzNDMyZmEyYTZjXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Arrested Development",
+        "Runtime_of_Series": "(2003–2019)",
+        "Certificate": "A",
+        "Runtime_of_Episodes": "22 min",
+        "Genre": [
+            "Comedy"
+        ],
+        "IMDB_Rating": 8.7,
+        "Overview": "Level-headed son Michael Bluth takes over family affairs after his father is imprisoned. But the rest of his spoiled, dysfunctional family are making his job unbearable.",
+        "No_of_Votes": 277090,
+        "docID": 43,
+        "Actors": [
+            "Jason Bateman",
+            "Michael Cera",
+            "Portia de Rossi",
+            "Will Arnett"
+        ],
+        "id": "f1b94f58-d952-4b2f-b366-7f2615e8ff17",
+        "_version_": 1758095608638341000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BZGFiOGY1MjAtNWM2Yy00YzBlLTkwODktMTZiOWMyZmNmZmZhXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_UY98_CR3,0,67,98_AL_.jpg",
+        "Series_Title": "Shameless",
+        "Runtime_of_Series": "(2011–2021)",
+        "Certificate": "18+",
+        "Runtime_of_Episodes": "46 min",
+        "Genre": [
+            "Comedy",
+            "Drama"
+        ],
+        "IMDB_Rating": 8.6,
+        "Overview": "A scrappy, feisty, fiercely loyal Chicago family makes no apologies.",
+        "No_of_Votes": 203687,
+        "docID": 69,
+        "Actors": [
+            "Emmy Rossum",
+            "William H. Macy",
+            "Ethan Cutkosky",
+            "Jeremy Allen White"
+        ],
+        "id": "3840e02d-350d-48fd-8a13-dbc5bd56c55c",
+        "_version_": 1758095608647778300
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BMTgxOTk4MDU3NF5BMl5BanBnXkFtZTcwNDc0MTEzMQ@@._V1_UY98_CR3,0,67,98_AL_.jpg",
+        "Series_Title": "The Oblongs...",
+        "Runtime_of_Series": "(2001–2002)",
+        "Runtime_of_Episodes": "284 min",
+        "Genre": [
+            "Animation",
+            "Comedy",
+            "Sci-Fi"
+        ],
+        "IMDB_Rating": 7,
+        "Overview": "The misadventures of a goofy family deformed by toxic waste.",
+        "No_of_Votes": 8371,
+        "docID": 1414,
+        "Actors": [
+            "Will Ferrell",
+            "Pamela Adlon",
+            "Jean Smart",
+            "Randy Sklar"
+        ],
+        "id": "e92df48b-9715-4ced-9aa1-d999460e4ee8",
+        "_version_": 1758095608829182000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BYjA1NWQyNzYtZTlmNy00YjYzLWJlNDUtMjA5ZWY2YTM2M2ZlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "Fresh Off the Boat",
+        "Runtime_of_Series": "(2015–2020)",
+        "Certificate": "PG",
+        "Runtime_of_Episodes": "22 min",
+        "Genre": [
+            "Comedy"
+        ],
+        "IMDB_Rating": 7.8,
+        "Overview": "A Taiwanese family makes their way in America during the 1990s.",
+        "No_of_Votes": 22353,
+        "docID": 647,
+        "Actors": [
+            "Randall Park",
+            "Constance Wu",
+            "Hudson Yang",
+            "Forrest Wheeler"
+        ],
+        "id": "850ed363-c2a5-4be9-95b7-73fe4881ca98",
+        "_version_": 1758095608745296000
+    },
+    {
+        "Poster_Link": "https://m.media-amazon.com/images/M/MV5BNTkzMjA3NDEyNl5BMl5BanBnXkFtZTgwMzE3MTIwNTM@._V1_UX67_CR0,0,67,98_AL_.jpg",
+        "Series_Title": "The Royals",
+        "Runtime_of_Series": "(2015–2018)",
+        "Runtime_of_Episodes": "42 min",
+        "Genre": [
+            "Drama"
+        ],
+        "IMDB_Rating": 7.5,
+        "Overview": "Drama about a fictional British royal family in modern-day London.",
+        "No_of_Votes": 11223,
+        "docID": 1131,
+        "Actors": [
+            "Joan Collins",
+            "William Moseley",
+            "Alexandra Park",
+            "Jake Maskall"
+        ],
+        "id": "c91a7b02-6015-414e-92ce-5f56fea7ffb2",
+        "_version_": 1758095608804016000
+    }
+]
