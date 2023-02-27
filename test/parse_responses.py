@@ -2,7 +2,10 @@ import os
 import csv
 from re import findall
 
-def parse_responses(dir ="judgments/solr/") -> dict:
+SOLR_DIR = "judgments/solr/"
+RF_DIR = "judgments/rf/"
+
+def parse_responses(dir : str = SOLR_DIR) -> dict:
     '''
     Params:
     - dir: directory of csv files
