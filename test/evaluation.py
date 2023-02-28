@@ -147,9 +147,15 @@ def interpolate_precision_recall(
 if __name__ == "__main__":
     RELEVANTS = load_relevats()
     K = 20
+    
+    # Variables for computing and plotting avg interpolated precision at
     avg_interpolated_solr_precision_at = np.zeros(K+1)
     avg_interpolated_rf_precision_at = np.zeros(K+1)
     recall_levels = [i/K for i in range(K+1)]
+
+    # Variables for computing and plotting MAP
+    map_solr = []
+    map_rf = []
 
     for q in QUERIES:
         solr_results = solr_query(q)
@@ -251,9 +257,11 @@ if __name__ == "__main__":
         label = "y = x"
     )
     plt.legend()
-    plt.show()
+    # plt.show()
     
     # Compute MAP
+
+    # TODO: compute right map
     
     # print("MAP of solr system: ", np.mean(avg_interpolated_solr_precision_at))
     # print("MAP of solr with rf system: ", np.mean(avg_interpolated_rf_precision_at))
@@ -261,10 +269,10 @@ if __name__ == "__main__":
     # Plot MAP Comparison
     plt.bar(
         ["Solr (baseline)", "Solr + Relevance Feedback"],
-        [np.mean(avg_interpolated_solr_precision_at), np.mean(avg_interpolated_rf_precision_at)],
+        [np.mean(avg_interpolated_solr_precision_at), np.mean(avg_interpolated_rf_precision_at)], # !!! QUESTO È SBAGLIATO
         width = 0.4
     )
     plt.xlabel("Systems")
     plt.ylabel("MAP")
     plt.title("MAP Comparison")
-    plt.show()
+    # plt.show()
