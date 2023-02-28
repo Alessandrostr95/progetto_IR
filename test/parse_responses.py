@@ -18,6 +18,10 @@ def parse_responses(dir : str = SOLR_DIR) -> dict:
     with os.scandir(dir) as csv_dir:
         # Iterate over directory files
         for file in csv_dir:
+            # Read only csv files from directory
+            _, file_extension = os.path.splitext(file.name)
+            if file_extension != ".csv":
+                continue
             query = findall(r"Serie che parlano di (.*)\.csv", file.name)[0]
             judgments[query] = []
             with open(file.path) as csvfile:
