@@ -88,10 +88,21 @@ def plot_precision_recall(
     title: str = '',
     color: str = 'b-',
     figure: plt.Figure = None,
-    show: bool = True
+    show: bool = True,
+    eps: float = 0.05,
 ) -> plt.Figure:
     """
     Plots the precision-recall curve, over current figure if given, or creates a new one.
+    Args:
+        `precision_at`: list of precision values at k
+        `recall_at`: list of recall values at k
+        `title`: title of the plot
+        `color`: color of the plot
+        `figure`: figure to plot on
+        `show`: whether to show the plot or not
+        `eps`: epsilon value for the plot limits borders
+    Returns:
+        The figure object
     """
     if figure is None:
         figure = plt.figure()
@@ -102,8 +113,10 @@ def plot_precision_recall(
         marker='s',
         markersize=3,
         linestyle='-.',
-        linewidth=1
+        linewidth=1,
     )
+    plt.xlim(-eps, 1 + eps)
+    plt.ylim(-eps, 1 + eps)
     plt.legend(['Solr (baseline)', 'Solr + Relevance Feedback'])
     plt.xlabel('Recall')
     plt.ylabel('Precision')
@@ -112,11 +125,25 @@ def plot_precision_recall(
         plt.show()
     return figure
 
+def interpolate_precision_recall(
+    precision_at: list[float],
+    recall_at: list[float],
+    k: int
+) -> tuple[list[float], list[float]]:
+    """
+    Interpolates the precision-recall curve at k.
+    """
+    interpolated_precision_at = []
+    interpolated_recall_at = recall_at[:]
+    for i in range(k):
+        interpolated_precision_at.append(max(precision_at[i:]))
+    return interpolated_precision_at, interpolated_recall_at
+
 
 if __name__ == "__main__":
     RELEVANTS = load_relevats()
 
-    for q in QUERIES[:2]:
+    for q in QUERIES[:1]:
         solr_results = solr_query(q)
         rf_results = rf_query(q)
 
@@ -145,5 +172,32 @@ if __name__ == "__main__":
         )
 
     # TODO: interpolate precision-recall curves
+
+        interpolated_solr_precision_at, interpolated_solr_recall_at = interpolate_precision_recall(
+            solr_precision_at,
+            solr_recall_at, 
+            20
+        )
+        interpolated_rf_precision_at, interpolated_rf_recall_at = interpolate_precision_recall(
+            rf_precision_at,
+            rf_recall_at,
+            20
+        )
+        
+    
+        fig = plot_precision_recall(
+            interpolated_solr_precision_at,
+            interpolated_solr_recall_at,
+            show=False,
+            color='r-'
+        )
+
+        plot_precision_recall(
+            interpolated_rf_precision_at,
+            interpolated_rf_recall_at,
+            figure=fig,
+            title=f'Interpolated Precision-Recall for q="{q}"'
+        )
+    
     # TODO: plot interpolated precision-recall curves and brakeven points
     # TODO: compute MAP (forse, se avanza tempo)
