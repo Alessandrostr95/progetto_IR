@@ -181,7 +181,7 @@ if __name__ == "__main__":
         #     title=f'Precision-Recall for q="{q}"'
         # )
 
-    # Interpolate precision-recall curves
+        # Interpolate precision-recall curves
 
         interpolated_solr_precision_at, interpolated_solr_recall_at = interpolate_precision_recall(
             solr_precision_at,
