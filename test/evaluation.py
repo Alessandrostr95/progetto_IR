@@ -86,10 +86,10 @@ def recall_at_k(results: list[int], relevants: list[int] | set, k: int) -> float
 def plot_precision_recall(
     precision_at: list[float],
     recall_at: list[float],
-    label: str = None,
+    label: str | None = None,
     title: str = '',
     color: str = 'b-',
-    figure: plt.Figure = None,
+    figure: plt.Figure | None = None,
     show: bool = True,
     eps: float = 0.05,
 ) -> plt.Figure:
