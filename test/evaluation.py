@@ -86,7 +86,7 @@ def recall_at_k(results: list[int], relevants: list[int] | set, k: int) -> float
 def plot_precision_recall(
     precision_at: list[float],
     recall_at: list[float],
-    label : str = None,
+    label: str = None,
     title: str = '',
     color: str = 'b-',
     figure: plt.Figure = None,
@@ -112,7 +112,7 @@ def plot_precision_recall(
         recall_at,
         precision_at,
         color,
-        label = label,
+        label=label,
         marker='s',
         markersize=3,
         linestyle='-.',
@@ -129,6 +129,7 @@ def plot_precision_recall(
         plt.show()
     return figure
 
+
 def interpolate_precision_recall(
     precision_at: list[float],
     recall_at: list[float],
@@ -143,23 +144,48 @@ def interpolate_precision_recall(
         interpolated_precision_at.append(max(precision_at[i:]))
     return interpolated_precision_at, interpolated_recall_at
 
+def compute_avg_precision(precision_at: list, is_relevant: list[bool]) -> float:
+    """
+    Computes the average precision for a given result set and a set of relevant documents.
+    """
+    return sum([p*r for p, r in zip(precision_at, is_relevant)]) / sum(is_relevant)
 
-if __name__ == "__main__":
+def compute_map(precision_at: dict, results: dict, relevants: dict) -> float:
+    """
+    Computes the mean average precision for a given result set and a set of relevant documents.
+
+    Parameters:
+        `precision_at`: dict of precision values at k for each query
+        `results`: dict of result sets for each query
+        `relevants`: dict of relevant documents for each query
+    """
+    _map = 0
+    for q in relevants.keys():
+        is_relevant = [r in relevants[q] for r in results[q]]
+        _map += compute_avg_precision(precision_at[q], is_relevant)
+    return _map / len(relevants)
+
+if __name__ == '__main__':
     RELEVANTS = load_relevats()
     K = 20
-    
+
     # Variables for computing and plotting avg interpolated precision at
-    avg_interpolated_solr_precision_at = np.zeros(K+1)
-    avg_interpolated_rf_precision_at = np.zeros(K+1)
-    recall_levels = [i/K for i in range(K+1)]
+    avg_interpolated_solr_precision_at = np.zeros(K + 1)
+    avg_interpolated_rf_precision_at = np.zeros(K + 1)
+    recall_levels = [i / K for i in range(K + 1)]
 
     # Variables for computing and plotting MAP
-    map_solr = []
-    map_rf = []
+    precision_at_k_solr = dict()
+    precision_at_k_rf = dict()
+    solr_results_set = dict()
+    rf_results_set = dict()
 
     for q in QUERIES:
-        solr_results = solr_query(q)
-        rf_results = rf_query(q)
+        solr_results = solr_query(q)    # Solr baseline
+        rf_results = rf_query(q)        # Solr + Relevance Feedback
+
+        solr_results_set[q] = solr_results  # Save results for MAP computation
+        rf_results_set[q] = rf_results      # Save results for MAP computation
 
         solr_precision_at = []
         solr_recall_at = []
@@ -171,6 +197,9 @@ if __name__ == "__main__":
             solr_recall_at.append(recall_at_k(solr_results, RELEVANTS[q], k))
             rf_precision_at.append(precision_at_k(rf_results, RELEVANTS[q], k))
             rf_recall_at.append(recall_at_k(rf_results, RELEVANTS[q], k))
+
+        precision_at_k_solr[q] = solr_precision_at  # Save precision at k for MAP computation
+        precision_at_k_rf[q] = rf_precision_at      # Save precision at k for MAP computation
 
         # Decomment following lines for plotting single query precision-recall curves
 
@@ -191,7 +220,7 @@ if __name__ == "__main__":
 
         interpolated_solr_precision_at, interpolated_solr_recall_at = interpolate_precision_recall(
             solr_precision_at,
-            solr_recall_at, 
+            solr_recall_at,
             K
         )
         interpolated_rf_precision_at, interpolated_rf_recall_at = interpolate_precision_recall(
@@ -199,7 +228,7 @@ if __name__ == "__main__":
             rf_recall_at,
             K
         )
-        
+
         # Decomment following lines for plotting single query interpolated precision-recall curves
 
         # fig = plot_precision_recall(
@@ -218,8 +247,14 @@ if __name__ == "__main__":
 
         # Update avg interpolated precision at for each recall levels
         for i, level in zip(range(len(avg_interpolated_solr_precision_at)), recall_levels):
-            avg_interpolated_solr_precision_at[i] += np.interp(level, interpolated_solr_recall_at, interpolated_solr_precision_at)
-            avg_interpolated_rf_precision_at[i] += np.interp(level, interpolated_rf_recall_at, interpolated_rf_precision_at)
+            avg_interpolated_solr_precision_at[i] += np.interp(
+                level, interpolated_solr_recall_at,
+                interpolated_solr_precision_at
+            )
+            avg_interpolated_rf_precision_at[i] += np.interp(
+                level, interpolated_rf_recall_at,
+                interpolated_rf_precision_at
+            )
 
     # Compute avg for each avg_interpolated element
     avg_interpolated_solr_precision_at /= len(QUERIES)
@@ -229,50 +264,49 @@ if __name__ == "__main__":
     fig = plot_precision_recall(
         avg_interpolated_solr_precision_at,
         recall_levels,
-        label = "Solr (baseline)",
-        show = False,
+        label='Solr (baseline)',
+        show=False,
         color='r-',
-        eps = 0
+        eps=0
     )
 
     plot_precision_recall(
         avg_interpolated_rf_precision_at,
         recall_levels,
-        label = "Solr + Relevance Feedback",
-        figure = fig,
-        title = f"Avg interpolated precision for {len(QUERIES)} queries",
-        eps = 0,
-        show = False
+        label='Solr + Relevance Feedback',
+        figure=fig,
+        title=f'Avg interpolated precision for {len(QUERIES)} queries',
+        eps=0,
+        show=False
     )
 
     # Add y = x function to plot
     plt.plot(
-        [0,1],
-        [0,1],
-        "k",
+        [0, 1],
+        [0, 1],
+        'k',
         marker='s',
         markersize=3,
         linestyle='--',
         linewidth=1,
-        label = "y = x"
+        label='y = x'
     )
     plt.legend()
     # plt.show()
-    
+
     # Compute MAP
 
-    # TODO: compute right map
-    
-    # print("MAP of solr system: ", np.mean(avg_interpolated_solr_precision_at))
-    # print("MAP of solr with rf system: ", np.mean(avg_interpolated_rf_precision_at))
-
     # Plot MAP Comparison
+    fig = plt.figure()
     plt.bar(
-        ["Solr (baseline)", "Solr + Relevance Feedback"],
-        [np.mean(avg_interpolated_solr_precision_at), np.mean(avg_interpolated_rf_precision_at)], # !!! QUESTO È SBAGLIATO
-        width = 0.4
+        ['Solr (baseline)', 'Solr + Relevance Feedback'],
+        [
+            compute_map(precision_at_k_solr, solr_results_set, RELEVANTS),
+            compute_map(precision_at_k_rf, rf_results_set, RELEVANTS)
+        ],
+        width=0.4
     )
-    plt.xlabel("Systems")
-    plt.ylabel("MAP")
-    plt.title("MAP Comparison")
-    # plt.show()
+    plt.xlabel('Systems')
+    plt.ylabel('MAP')
+    plt.title('MAP Comparison')
+    plt.show()
