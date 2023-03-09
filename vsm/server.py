@@ -38,7 +38,7 @@ def rocchio(
     q = vsm.add(q, C_r)
 
     C_nr = vsm.mult(C_nr, gamma)
-    q = vsm.add(q, C_nr)
+    q = vsm.sub(q, C_nr)
     
     return q
 
